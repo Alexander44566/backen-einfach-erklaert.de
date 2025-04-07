@@ -1,9 +1,0 @@
-- Veröffentlichen
-	-> Weitere Lexikon Einträge hinzufügen
-	-> Weitere Rezepte hinzufügen
-	-> Sidebar mit JavaScript oder TypeScript
- 
-- Nächste Version
-	-> Angular lernen
-	-> mit Angular die Website erstellen 
-	-> besseres Design
