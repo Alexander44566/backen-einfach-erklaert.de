@@ -1,9 +1,9 @@
 document.addEventListener("DOMContentLoaded", () => {
     const navLinks = document.querySelectorAll("header nav a");
-    const currentPath = window.location.pathname;
+    const currentPath = decodeURIComponent(window.location.pathname); // Dekodiert Sonderzeichen im Pfad
 
     navLinks.forEach(link => {
-        if (link.getAttribute("href") === currentPath) {
+        if (decodeURIComponent(link.getAttribute("href")) === currentPath) { // Dekodiert auch das href-Attribut
             link.classList.add("active");
         } else {
             link.classList.remove("active");
@@ -47,8 +47,10 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 
-    const LexikonButton = document.getElementById("LexikonButton");
-    LexikonButton.addEventListener("click", () => { // KORREKT
-        window.location.href = "/pages/Lexikon.html";
-    });
+    const lexikonButton = document.getElementById("LexikonButton");
+    if (lexikonButton) {
+        lexikonButton.addEventListener("click", () => {
+            window.location.href = "/pages/Lexikon.html";
+        });
+    }
 });

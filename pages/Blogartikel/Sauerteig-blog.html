@@ -1,12 +1,17 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sauerteig-Blog</title>
-    <link rel="stylesheet" href="/styles/general.css"> <!-- Allgemeine Styles für die Seite -->
-    <link rel="stylesheet" href="/styles/Blog.css"> <!-- Styles für die Blog-Seite -->
-    <script src="/scripts/general.js"></script> <!-- Allgemeinen Javascript-Datei -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Alles über Sauerteig: Tipps, Tricks und Hintergrundwissen für das perfekte Brot. Entdecke die Magie von Mehl, Wasser und Zeit!">
+  <meta name="keywords" content="Sauerteig, Brot, Backen, Fermentation, Rezepte, Sauerteigarten, Tipps">
+  <meta name="author" content="Backen einfach erklärt">
+  <title>Sauerteig – Magie aus Mehl, Wasser & Zeit</title>
+  <link rel="stylesheet" href="/styles/general.css">  <!-- Verlinkung der allgemeinen CSS-Datei -->
+  <link rel="stylesheet" href="/styles/blog.css"> <!-- Verlinkung der Blog-spezifischen CSS-Datei -->
+  <link rel="icon" href="/assets/img/Favicon.ico" type="image/x-icon">
+  <script src="/scripts/general.js"></script> <!-- Verlinkung der allgemeinen Javascript-Datei -->
+  <script src="/scripts/blogButtons.js"></script>
 </head>
 
 <body>
@@ -14,9 +19,9 @@
         <!-- Header-Bereich mit Navigation -->
         <header>
             <h1>Backen einfach erklärt</h1>
-            <img src="/assets/img/Logo.webp" alt="" class="Logo">
-            <nav>
-                <a href="/pages/Home.html">Home</a>
+            <img src="/assets/img/Logo.webp" alt="Logo von Backen einfach erklärt" class="Logo">
+            <nav aria-label="Hauptnavigation">
+                <a href="/pages/index.html">Home</a>
                 <a href="/pages/Blog.html">Blog</a>
                 <a href="/pages/Rezepte.html">Rezepte</a>
                 <a href="/pages/Lexikon.html">Lexikon</a>
@@ -24,9 +29,9 @@
             </nav>
         </header>
 
-        <section>
+        <section aria-labelledby="sauerteig-title">
             <div class="content-block">
-                <h2>🥖 Sauerteig – Magie aus Mehl, Wasser &amp; Zeit</h2>
+                <h2 id="sauerteig-title">🥖 Sauerteig – Magie aus Mehl, Wasser &amp; Zeit</h2>
                 <p>Der Duft von frisch gebackenem Brot. Eine knusprige Kruste. Ein lockerer, leicht säuerlicher Biss. Wer einmal echtes Sauerteigbrot probiert hat, spürt: <strong>Das ist mehr als nur Brot – das ist Kultur, Zeitgeist und Handwerk in einem.</strong></p>
               
                 <h3>🌿 Was ist Sauerteig?</h3>
@@ -58,40 +63,40 @@
               
                 <h3>🌍 Verschiedene Sauerteigarten</h3>
                 <table>
-                  <thead>
-                    <tr>
-                      <th>🌾 Art</th>
-                      <th>🧑‍🍳 Verwendung</th>
-                      <th>🔎 Besonderheiten</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td><strong>Roggensauerteig</strong></td>
-                      <td>Bauernbrot, Mischbrot</td>
-                      <td>Sehr aktiv, kräftige Säure</td>
-                    </tr>
-                    <tr>
-                      <td><strong>Weizensauerteig (Levain)</strong></td>
-                      <td>Baguette, helles Brot</td>
-                      <td>Milder, aromatisch</td>
-                    </tr>
-                    <tr>
-                      <td><strong>Dinkelsauerteig</strong></td>
-                      <td>Dinkelbrot</td>
-                      <td>Nussiger Geschmack, zart</td>
-                    </tr>
-                    <tr>
-                      <td><strong>Lievito Madre 🇮🇹</strong></td>
-                      <td>Pizza, süßes Gebäck</td>
-                      <td>Mild, leicht süßlich, fest geführt</td>
-                    </tr>
-                    <tr>
-                      <td><strong>Reissauerteig 🍚</strong></td>
-                      <td>Glutenfreies Brot</td>
-                      <td>Ideal für Zöliakie – ohne Weizen</td>
-                    </tr>
-                  </tbody>
+                    <thead>
+                        <tr>
+                            <th scope="col">🌾 Art</th>
+                            <th scope="col">🧑‍🍳 Verwendung</th>
+                            <th scope="col">🔎 Besonderheiten</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Roggensauerteig</strong></td>
+                            <td>Bauernbrot, Mischbrot</td>
+                            <td>Sehr aktiv, kräftige Säure</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Weizensauerteig (Levain)</strong></td>
+                            <td>Baguette, helles Brot</td>
+                            <td>Milder, aromatisch</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Dinkelsauerteig</strong></td>
+                            <td>Dinkelbrot</td>
+                            <td>Nussiger Geschmack, zart</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Lievito Madre 🇮🇹</strong></td>
+                            <td>Pizza, süßes Gebäck</td>
+                            <td>Mild, leicht süßlich, fest geführt</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Reissauerteig 🍚</strong></td>
+                            <td>Glutenfreies Brot</td>
+                            <td>Ideal für Zöliakie – ohne Weizen</td>
+                        </tr>
+                    </tbody>
                 </table>
                 <p>💡 <strong>Tipp:</strong> Du kannst auch kreative Mischformen machen – z. B. mit Buchweizen, Emmer oder Kamut.</p>
               

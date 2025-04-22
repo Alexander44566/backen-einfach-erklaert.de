@@ -1,14 +1,16 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blog</title>
-   <!-- Verlinkung der allgemeinen CSS-Datei -->
-   <link rel="stylesheet" href="/styles/general.css"> <!-- Allgemeine Styles für die Seite -->
-   <!-- Verlinkung der allgemeinen Javascript-Datei -->
-   <script src="/scripts/general.js"></script>
-   <script src="/scripts/blogButtons.js"></script>
+    <meta name="description" content="Entdecke spannende Artikel rund ums Backen: Sauerteig, Backzutaten und mehr. Perfekt für Anfänger und Hobbybäcker!">
+    <meta name="keywords" content="Backen, Blog, Sauerteig, Backzutaten, Tipps, Rezepte, Hobbybäcker">
+    <meta name="author" content="Backen einfach erklärt">
+    <title>Blog – Backen einfach erklärt</title>
+    <link rel="stylesheet" href="/styles/general.css">  <!-- Verlinkung der allgemeinen CSS-Datei -->
+    <link rel="icon" href="/assets/img/Favicon.ico" type="image/x-icon">
+    <script src="/scripts/general.js"></script> <!-- Verlinkung der allgemeinen Javascript-Datei -->
+    <script src="/scripts/blogButtons.js"></script>
 </head>
 
 <body>
@@ -16,9 +18,9 @@
         <!-- Header-Bereich mit Navigation -->
         <header>
             <h1>Backen einfach erklärt</h1>
-            <img src="/assets/img/Logo.webp" alt="" class="Logo">
-            <nav>
-                <a href="/pages/Home.html">Home</a>
+            <img src="/assets/img/Logo.webp" alt="Logo von Backen einfach erklärt" class="Logo">
+            <nav aria-label="Hauptnavigation">
+                <a href="/pages/index.html">Home</a>
                 <a href="/pages/Blog.html">Blog</a>
                 <a href="/pages/Rezepte.html">Rezepte</a>
                 <a href="/pages/Lexikon.html">Lexikon</a>
@@ -26,10 +28,10 @@
             </nav>
         </header>
 
-        <section>
-          
+        <section aria-labelledby="blog-title">
+
             <div class="content-block">
-                <h2 class="content-title">Sauerteig – Brot mit Charakter 🥖</h2>
+                <h3 class="content-title">Sauerteig – Brot mit Charakter 🥖</h3>
                 <img class="content-image" src="/assets/img/Sauerteig.webp" alt="Ein Glas mit Sauerteigstarter">
                 <p class="content-text">
                     Was steckt eigentlich hinter dem lebendigen Teig aus Mehl, Wasser und Zeit? 🌾 Entdecke die Welt des Sauerteigs,
@@ -40,30 +42,24 @@
             </div>
 
             <div class="content-block">
-                <h2 class="content-title">Backzutaten – Die Basis für dein perfektes Gebäck 🍰</h2>
+                <h3 class="content-title">Backzutaten – Die Basis für dein perfektes Gebäck 🍰</h3>
                 <img class="content-image" src="/assets/img/Zutaten.webp" alt="Verschiedene Backzutaten wie Mehl, Eier und Zucker">
                 <p class="content-text">
                     Jeder Bäcker, ob Anfänger oder Profi, weiß: Die richtigen Backzutaten machen den Unterschied zwischen einem flachen
-                    Kuchen und einem himmlischen Meisterwerk.
-                    Doch was steckt eigentlich hinter den gängigen Backzutaten und wie beeinflussen sie das Ergebnis?
-                    In diesem Artikel gehen wir auf die wichtigsten Zutaten ein, die du in deiner Küche haben solltest –
-                    von Mehl über Zucker bis hin zu Hefe und mehr!
-                    Wir zeigen dir, wie die verschiedenen Zutaten zusammenwirken, um deinen Teig perfekt zu machen.
-                    Entdecke alles, was du über die Hauptzutaten und deren Wirkung wissen musst, und starte dein nächstes
-                    Backabenteuer mit dem richtigen Wissen.
+                    Kuchen und einem himmlischen Meisterwerk. Doch was steckt eigentlich hinter den gängigen Backzutaten und wie beeinflussen sie das Ergebnis?
+                    In diesem Artikel gehen wir auf die wichtigsten Zutaten ein, die du in deiner Küche haben solltest – von Mehl über Zucker bis hin zu Hefe und mehr!
                 </p>
-                <button class="content-button" aria-label="Mehr über Sauerteig erfahren" id="ZutatenButton">Mehr zu den Backzutaten erfahren</button>
+                <button class="content-button" aria-label="Mehr über Backzutaten erfahren" id="ZutatenButton">Mehr zu den Backzutaten erfahren</button>
             </div>
-
         </section>
         
         <!-- Footer-Bereich -->
         <footer> 
             <!-- Navigation im Footer -->
-            <nav>
+            <nav aria-label="Footer-Navigation">
                 <a href="/pages/Impressum.html">Impressum</a>
                 <a href="/pages/Datenschutz.html">Datenschutz</a>
-                <a href="/pages/Datenschutz.html">Cookies</a>
+                <a href="/pages/Cookies.html">Cookies</a>
                 <a href="/pages/Kontakt.html">Kontakt</a>
             </nav>
             <p>&copy;2025 Backen einfach erklärt. Alle Rechte vorbehalten.</p> <!-- Copyright-Hinweis -->
