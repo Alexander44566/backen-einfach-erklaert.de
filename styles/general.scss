@@ -109,7 +109,7 @@ header {
 
 // Navigation
 header nav a {
-    text-decoration: none;
+    text-decoration: none; // Entfernt die Standard-Unterstreichung
     color: $HightlightText-color; // Standardfarbe für Links
     font-size: 1rem;
     padding: 0.5rem 1rem;
@@ -117,19 +117,21 @@ header nav a {
     transition: all 0.3s ease;
 
     &:hover {
-        text-decoration: underline; // Unterstreicht den Link beim Hover
-        text-decoration-color: #0000FF; // Blau für die Unterstreichung
+        background-color: rgba($HightlightText-color, 0.2); // Hintergrund mit fast vollständiger Transparenz
+        color: $HightlightText-color; // Text bleibt in der Highlight-Farbe
+        text-decoration: none; // Keine Unterstreichung
     }
 
     &.active {
-        background-color: #0000FF; // Blauer Hintergrund für die aktive Seite
+        background-color: $HightlightText-color; // Hintergrundfarbe für die aktive Seite
         color: white; // Weiße Schriftfarbe
         font-weight: bold; // Optional: Fett für die aktive Seite
+        text-decoration: none; // Entfernt die Unterstreichung bei aktiven Links
     }
 }
 
 header nav a.active {
-    background-color: #0000FF; // Blaue Hintergrundfarbe für die aktive Seite
+    background-color: $HightlightText-color; // Nutzt die Highlight-Farbe aus der SCSS-Variable
     color: white; // Weiße Schriftfarbe
     font-weight: bold; // Optional: Fett für die aktive Seite
     padding: 0.5rem 1rem; // Polsterung für den Text

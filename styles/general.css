@@ -97,17 +97,19 @@ header nav a {
   transition: all 0.3s ease;
 }
 header nav a:hover {
-  text-decoration: underline;
-  text-decoration-color: #0000FF;
+  background-color: rgba(160, 82, 45, 0.2);
+  color: #A0522D;
+  text-decoration: none;
 }
 header nav a.active {
-  background-color: #0000FF;
+  background-color: #A0522D;
   color: white;
   font-weight: bold;
+  text-decoration: none;
 }
 
 header nav a.active {
-  background-color: #0000FF;
+  background-color: #A0522D;
   color: white;
   font-weight: bold;
   padding: 0.5rem 1rem;
