@@ -1,0 +1,452 @@
+@charset "UTF-8";
+@font-face {
+  font-family: "MainFont";
+  src: url("/assets/fonts/NationalPark-Regular.ttf");
+}
+@font-face {
+  font-family: "SecondFont";
+  src: url("/assets/fonts/OpenSans_Condensed-Regular.ttf");
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "MainFont", "SecondFont", sans-serif;
+  color: black;
+  font-size: 1rem;
+  line-height: 1.5;
+  background-color: #E6D3B3;
+  padding-top: 0;
+}
+
+main {
+  width: 90%;
+  max-width: 1200px;
+  margin: 2rem auto;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem 5%;
+  background-color: #E6D3B3;
+  position: relative;
+}
+header h1 {
+  font-size: 1.2rem;
+  margin: 0;
+  padding-top: 0.2rem;
+  z-index: 2;
+}
+header nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem;
+  z-index: 2;
+}
+header nav a {
+  text-decoration: none;
+  color: #A0522D;
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  transition: all 0.3s ease;
+}
+header nav a:hover {
+  text-decoration: underline;
+  text-decoration-color: #0000FF;
+}
+header nav a.active {
+  background-color: #0000FF;
+  color: white;
+  font-weight: bold;
+}
+header img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 30vw;
+  height: auto;
+  z-index: 1;
+  opacity: 0.1;
+}
+header img.logo {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 30%;
+  height: auto;
+  z-index: 1;
+  opacity: 0.1;
+  pointer-events: none;
+}
+
+header nav a {
+  text-decoration: none;
+  color: #A0522D;
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  transition: all 0.3s ease;
+}
+header nav a:hover {
+  text-decoration: underline;
+  text-decoration-color: #0000FF;
+}
+header nav a.active {
+  background-color: #0000FF;
+  color: white;
+  font-weight: bold;
+}
+
+header nav a.active {
+  background-color: #0000FF;
+  color: white;
+  font-weight: bold;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  transition: background-color 0.3s ease, border-radius 0.3s ease;
+}
+
+section {
+  margin-top: 2rem;
+  padding: 1rem;
+}
+
+.content-block {
+  max-width: 800px;
+  margin: 0 auto 2rem auto;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-color: #D2B48C;
+  border: 1px solid #3D3D3D;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.content-block .content-title {
+  font-size: clamp(1.8rem, 2.5vw, 3rem);
+  margin-bottom: 1.5rem;
+}
+.content-block .content-text {
+  font-size: clamp(1rem, 1.5vw, 1.4rem);
+  line-height: 1.8;
+  margin: 0 auto 1.5rem auto;
+  max-width: 750px;
+  text-align: left;
+}
+.content-block .content-image {
+  max-width: 80%;
+  height: auto;
+  margin-bottom: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.content-block .content-button {
+  font-size: clamp(1rem, 1.5vw, 1.2rem);
+  padding: 1rem 2rem;
+  background-color: #A0522D;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.content-block .content-button:hover {
+  background-color: #8B4513;
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  background-color: #E6D3B3;
+  text-align: center;
+  gap: 1rem;
+}
+footer a {
+  text-decoration: none;
+  color: #A0522D;
+  font-size: 0.9rem;
+  margin: 0.5rem;
+}
+footer a:hover {
+  text-decoration: underline;
+  text-decoration-color: #A0522D;
+}
+footer p {
+  margin-top: 1rem;
+  font-size: 0.8rem;
+  color: #3D3D3D;
+}
+
+/* Mobile (bis 480px) */
+@media (max-width: 480px) {
+  header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0.5rem;
+    height: auto;
+  }
+  header h1 {
+    font-size: 1.5rem;
+    text-align: center;
+    margin: 0 0 0.5rem 0;
+    width: 100%;
+  }
+  header nav {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.5rem;
+    width: 100%;
+  }
+  header nav a {
+    font-size: 0.9rem;
+    padding: 0.4rem 0.8rem;
+    text-align: center;
+  }
+}
+/* Tablet (481px bis 768px) */
+@media (min-width: 481px) and (max-width: 768px) {
+  header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    height: auto;
+  }
+  header h1 {
+    font-size: 1.8rem;
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+  header nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    width: 100%;
+  }
+  header nav a {
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+  }
+  footer {
+    flex-direction: column;
+    padding: 2rem 10%;
+    gap: 2rem;
+  }
+  footer a {
+    font-size: 1.2rem;
+    margin: 1rem;
+  }
+  footer p {
+    font-size: 1rem;
+  }
+}
+/* Kleine Laptops (769px bis 1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+  header {
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0;
+  }
+  header h1 {
+    font-size: 3rem;
+    line-height: 75px;
+    margin: 0;
+  }
+  header nav {
+    height: 37.5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+  }
+  header nav a {
+    font-size: 1.2rem;
+    padding: 0.5rem 1rem;
+  }
+  footer {
+    flex-direction: column;
+    padding: 2.5rem 15%;
+    gap: 2.5rem;
+  }
+  footer a {
+    font-size: 1.4rem;
+    margin: 1.5rem;
+  }
+  footer p {
+    font-size: 1.2rem;
+  }
+}
+/* Standard-Laptops (1025px bis 1440px) */
+@media (min-width: 1025px) and (max-width: 1440px) {
+  .content-block {
+    max-width: 1200px;
+    padding: 2rem;
+  }
+  .content-title {
+    font-size: clamp(2.5rem, 4vw, 4.5rem);
+  }
+  .content-text {
+    font-size: clamp(1.5rem, 2.5vw, 2rem);
+    max-width: 1000px;
+  }
+  .content-image {
+    max-width: 90%;
+  }
+  .content-button {
+    font-size: clamp(1.5rem, 2.5vw, 2rem);
+    padding: 1.5rem 3rem;
+  }
+  header {
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0;
+  }
+  header h1 {
+    font-size: 3.5rem;
+    line-height: 75px;
+    margin: 0;
+  }
+  header nav {
+    height: 37.5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+  }
+  header nav a {
+    font-size: 1.4rem;
+    padding: 0.6rem 1.5rem;
+  }
+  footer {
+    flex-direction: column;
+    padding: 3rem 10%;
+    gap: 2rem;
+  }
+  footer a {
+    font-size: 1.6rem;
+    margin: 1rem;
+  }
+  footer p {
+    font-size: 1.4rem;
+  }
+}
+/* Große Bildschirme (ab 1441px) */
+@media (min-width: 1441px) {
+  .content-block {
+    max-width: 1400px;
+    padding: 2.5rem;
+  }
+  .content-title {
+    font-size: clamp(3rem, 4vw, 4.5rem);
+  }
+  .content-text {
+    font-size: clamp(1.8rem, 2.5vw, 2.2rem);
+    max-width: 1200px;
+  }
+  .content-image {
+    max-width: 85%;
+  }
+  .content-button {
+    font-size: clamp(1.8rem, 2.5vw, 2.2rem);
+    padding: 1.8rem 3.5rem;
+  }
+  header {
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5rem 5%;
+  }
+  header h1 {
+    font-size: 4rem;
+    margin-bottom: 1.5rem;
+  }
+  header nav {
+    justify-content: center;
+    width: 100%;
+    gap: 2rem;
+  }
+  header nav a {
+    font-size: 1.6rem;
+    padding: 0.7rem 1.8rem;
+  }
+  footer {
+    flex-direction: column;
+    padding: 3.5rem 10%;
+    gap: 2rem;
+  }
+  footer a {
+    font-size: 1.6rem;
+    margin: 1.5rem;
+  }
+  footer p {
+    font-size: 1.4rem;
+  }
+}
+body {
+  text-align: left;
+}
+
+.content-block {
+  text-align: left;
+  padding: 2rem;
+  line-height: 1.8;
+}
+
+.content-block h2,
+.content-block h3,
+.content-block h4,
+.content-block p,
+.content-block ul,
+.content-block ol,
+.content-block table {
+  text-align: left !important;
+  margin-bottom: 1.5rem;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+  border: 1px solid black;
+}
+
+table th, table td {
+  border: 1px solid black;
+  padding: 0.8rem;
+  text-align: left;
+}
+
+table th {
+  background-color: #8B4513;
+  color: white;
+  font-weight: bold;
+}/*# sourceMappingURL=blog.css.map */
