@@ -12,4 +12,11 @@ document.addEventListener("DOMContentLoaded", () => {
             window.location.href = "/pages/Blogartikel/Zutaten-blog.html";
         });
     }
+
+    const AutolyseButton = document.getElementById("AutolyseButton");
+    if (AutolyseButton) {
+        AutolyseButton.addEventListener("click", () => {
+            window.location.href = "/pages/Blogartikel/autolyse-blog.html";
+        });
+    }
 });
