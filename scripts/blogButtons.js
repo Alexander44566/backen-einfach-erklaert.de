@@ -19,4 +19,18 @@ document.addEventListener("DOMContentLoaded", () => {
             window.location.href = "/pages/Blogartikel/autolyse-blog.html";
         });
     }
+
+    const VorteigeButton = document.getElementById("VorteigeButton");
+    if (VorteigeButton) {
+        VorteigeButton.addEventListener("click", () => {
+            window.location.href = "/pages/Blogartikel/vorteig-blog.html";
+        });
+    }
+
+    const BacktechnikenButton = document.getElementById("BacktechnikenButton");
+    if (BacktechnikenButton) {
+        BacktechnikenButton.addEventListener("click", () => {
+            window.location.href = "/pages/Blogartikel/backtechniken-blog.html";
+        });
+    }
 });
