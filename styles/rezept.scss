@@ -1,0 +1,73 @@
+@import './general.scss';
+
+// Überschreibe spezifische Styles für Blogartikel
+body {
+    text-align: left; // Gesamter Text linksbündig
+}
+
+.content-block {
+    text-align: left; // Text innerhalb der Content-Blöcke linksbündig
+    padding: 2rem; // Optional: Zusätzlicher Innenabstand für bessere Lesbarkeit
+    line-height: 1.8; // Optional: Angenehmer Zeilenabstand für längere Texte
+}
+
+.content-block h2, 
+.content-block h3, 
+.content-block h4, 
+.content-block p, 
+.content-block ul, 
+.content-block ol, 
+.content-block table {
+    text-align: left !important; // Erzwingt Links-Ausrichtung
+    margin-bottom: 1.5rem; // Optional: Abstand nach unten für bessere Struktur
+}
+
+// Tabelle
+table {
+    width: 100%; // Tabellenbreite
+    border-collapse: collapse; // Tabellenränder zusammenführen
+    margin-top: 1rem;
+    border: 1px solid black; // Schwarze Rahmenlinie für die gesamte Tabelle
+}
+
+table th, table td {
+    border: 1px solid black; // Schwarze Rahmenlinien für Zellen
+    padding: 0.8rem; // Innenabstand
+    text-align: left; // Text in Tabellenzellen linksbündig
+}
+
+table th {
+    background-color: #8B4513; // Highlight-Farbe (Braun) für die Kopfzeile
+    color: white; // Weiße Schriftfarbe
+    font-weight: bold;
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+    gap: 0.5rem;
+
+    .page-link {
+        text-decoration: none;
+        color: $Text-color;
+        background-color: $SecondBackground-color;
+        padding: 0.5rem 1rem;
+        border-radius: 5px;
+        transition: all 0.3s ease;
+
+        &:hover {
+            background-color: $HightlightText-color;
+            color: white;
+        }
+    }
+
+    .current-page {
+        color: white;
+        background-color: $HightlightText-color;
+        padding: 0.5rem 1rem;
+        border-radius: 5px;
+        font-weight: bold;
+    }
+}
