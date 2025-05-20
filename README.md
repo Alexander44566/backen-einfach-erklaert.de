@@ -21,6 +21,10 @@ Dieses Projekt bietet grundlegende Informationen, Rezepte und hilfreiche Erklär
 
 Die Website soll Back-Einsteiger*innen helfen, sich einfach und schnell Wissen anzueignen – ohne komplizierte Fachsprache.
 
+## Info
+
+Ich arbeite bereits an einer neuen version wo sich das gesamte design ändern wird. Ebenfalls wird nun SCSS statt CSS direkt verwendet. Der neue Quellcode ist im branch unter main-V2 bereits gespeichert
+
 ---
 
 Viel Spaß beim Stöbern und Backen! 🍰
