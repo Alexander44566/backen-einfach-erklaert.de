@@ -34,6 +34,19 @@ body {
     }
 }
 
+@media (max-width: 700px) {
+  .content-block {
+    display: flex;
+    flex-direction: column;
+  }
+  .content-block time[itemprop="datePublished"] {
+    order: 100;
+    align-self: flex-end;
+    margin: 1.2em 0 0.2em 0;
+    text-align: right;
+  }
+}
+
 .content-block h2, 
 .content-block h3, 
 .content-block h4, 
@@ -63,6 +76,65 @@ table th {
     background-color: #8B4513; // Highlight-Farbe (Braun) für die Kopfzeile
     color: white; // Weiße Schriftfarbe
     font-weight: bold;
+}
+
+// Responsive Tabellen für Blogartikel
+.content-block table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 2em;
+  overflow-x: auto;
+  display: block;
+  max-width: 100%;
+}
+.content-block th,
+.content-block td {
+  padding: 0.7em 1em;
+  border: 1px solid #e0d6c6;
+  text-align: left;
+  font-size: 1em;
+}
+@media (max-width: 700px) {
+  .content-block table,
+  .content-block thead,
+  .content-block tbody,
+  .content-block th,
+  .content-block td,
+  .content-block tr {
+    display: block;
+    width: 100%;
+  }
+  .content-block thead {
+    display: none;
+  }
+  .content-block tr {
+    margin-bottom: 1.2em;
+    border-bottom: 2px solid #f7f3ed;
+    box-shadow: 0 2px 8px rgba(160,82,45,0.04);
+    background: #fff;
+    border-radius: 0.7em;
+    padding: 0.5em 0.7em;
+  }
+  .content-block td {
+    position: relative;
+    padding-left: 50%;
+    min-height: 2.5em;
+    border: none;
+    border-bottom: 1px solid #e0d6c6;
+    font-size: 1em;
+    box-sizing: border-box;
+  }
+  .content-block td:before {
+    position: absolute;
+    top: 0.7em;
+    left: 1em;
+    width: 45%;
+    white-space: normal;
+    font-weight: bold;
+    color: #a0522d;
+    content: attr(data-label);
+    font-size: 0.98em;
+  }
 }
 
 .pagination {
