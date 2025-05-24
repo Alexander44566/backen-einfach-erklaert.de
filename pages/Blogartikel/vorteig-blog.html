@@ -23,7 +23,54 @@
   <link rel="stylesheet" href="/styles/blog.css"> <!-- Verlinkung der Blog-spezifischen CSS-Datei -->
   <link rel="icon" href="/assets/img/Favicon.ico" type="image/x-icon">
   <script src="/scripts/general.js"></script> <!-- Verlinkung der allgemeinen Javascript-Datei -->
-  <script src="/scripts/blogButtons.js"></script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Was ist ein Vorteig?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Ein Vorteig ist eine Mischung aus Mehl, Wasser und wenig Hefe oder Sauerteig, die vor dem eigentlichen Teig angesetzt und mehrere Stunden fermentiert wird. Er verbessert Aroma, Frischhaltung und Struktur des Brotes."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Welche Vorteigarten gibt es?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Zu den wichtigsten Vorteigarten zählen Poolish (weicher Vorteig), Biga (fester Vorteig), Sauerteig-Vorteig (Levain) und Quellstück/Brühstück. Jede Art hat eigene Vorteile für Geschmack und Textur."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Wie lange muss ein Vorteig reifen?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Die Reifezeit hängt von der Vorteigart ab: Poolish und Biga reifen meist 12–18 Stunden, Quell- und Brühstück mindestens 1–2 Stunden."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Wie verwende ich den Vorteig im Hauptteig?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Der gereifte Vorteig wird einfach mit den restlichen Zutaten (Mehl, Wasser, Salz, ggf. Hefe) zum Hauptteig gegeben. Die Gehzeit des Hauptteigs kann dadurch meist verkürzt werden."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Was tun, wenn der Vorteig zu lange gereift ist?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Ein leicht eingefallener Vorteig kann noch verwendet werden, solange er angenehm riecht. Ist er stark überreif (stark sauer, alkoholisch), sollte er besser neu angesetzt werden."
+        }
+      }
+    ]
+  }
+  </script>
 </head>
 
 <body>
@@ -34,10 +81,10 @@
             <img src="/assets/img/Logo.webp" alt="Logo von Backen einfach erklärt" class="Logo">
             <nav aria-label="Hauptnavigation">
                 <a href="/pages/index.html">Home</a>
-                <a href="/pages/Blog.html">Blog</a>
-                <a href="/pages/Rezepte.html">Rezepte</a>
-                <a href="/pages/Lexikon.html">Lexikon</a>
-                <a href="/pages/Über-uns.html">Über uns</a>
+                <a href="/pages/blog.html">Blog</a>
+                <a href="/pages/rezepte.html">Rezepte</a>
+                <a href="/pages/lexikon.html">Lexikon</a>
+                <a href="/pages/über-uns.html">Über uns</a>
             </nav>
         </header>
 
@@ -87,18 +134,18 @@
               
               
         </section>
-        <nav class="back-to-blog-nav" aria-label="Zurück zum Blog">
-          <a href="/pages/Blog.html" class="back-to-blog" aria-label="Zurück zur Blogübersicht">&larr; Zurück zum Blog</a>
+        <nav class="back-to-blog-nav" aria-label="Zurück zum Blog" style="margin:2.5em 0 1.5em 0;">
+          <a href="/pages/blog.html" class="back-to-blog" aria-label="Zurück zur Blogübersicht" style="display:inline-block;padding:0.5em 1.2em 0.5em 1.2em;background:#f7f3ed;border-left:4px solid #A0522D;border-radius:1em;color:#4a3b2a;font-weight:600;text-decoration:none;box-shadow:0 2px 8px rgba(160,82,45,0.07);transition:background 0.18s,color 0.18s;">&larr; Zurück zum Blog</a>
         </nav>
         
         <!-- Footer-Bereich -->
         <footer> 
             <!-- Navigation im Footer -->
             <nav>
-                <a href="/pages/Impressum.html">Impressum</a>
-                <a href="/pages/Datenschutz.html">Datenschutz</a>
-                <a href="/pages/Cookies.html">Cookies</a>
-                <a href="/pages/Kontakt.html">Kontakt</a>
+                <a href="/pages/impressum.html">Impressum</a>
+                <a href="/pages/datenschutz.html">Datenschutz</a>
+                <a href="/pages/cookies.html">Cookies</a>
+                <a href="/pages/kontakt.html">Kontakt</a>
             </nav>
             <p>&copy;2025 Backen einfach erklärt. Alle Rechte vorbehalten.</p> <!-- Copyright-Hinweis -->
         </footer>

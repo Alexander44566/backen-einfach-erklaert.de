@@ -23,7 +23,54 @@
   <link rel="stylesheet" href="/styles/blog.css"> <!-- Verlinkung der Blog-spezifischen CSS-Datei -->
   <link rel="icon" href="/assets/img/Favicon.ico" type="image/x-icon">
   <script src="/scripts/general.js"></script> <!-- Verlinkung der allgemeinen Javascript-Datei -->
-  <script src="/scripts/blogButtons.js"></script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Welche Mehlsorte eignet sich für welches Gebäck?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Weizenmehl Type 405 ist ideal für feine Kuchen und Kekse, Type 550 für Brot und Brötchen. Roggenmehl ist unverzichtbar für Sauerteigbrote, Dinkelmehl eignet sich für gesundes Gebäck mit nussigem Geschmack."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Was ist der Unterschied zwischen Backpulver und Natron?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Backpulver enthält bereits eine Säure und reagiert sofort mit Flüssigkeit, während Natron eine zusätzliche saure Zutat wie Joghurt oder Zitronensaft benötigt, um den Teig zu lockern."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Wie kann ich Eier beim Backen ersetzen?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Eier lassen sich durch Apfelmus, Leinsamen, Chiasamen oder spezielle Ei-Ersatzprodukte ersetzen. Diese Alternativen sorgen für Bindung und Feuchtigkeit im Teig."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Welche Fette sind am besten für Kuchen und Gebäck?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Butter sorgt für klassischen Geschmack und zarte Krume, Pflanzenöl macht Gebäck besonders saftig, Margarine ist eine günstige Alternative mit ähnlichen Eigenschaften wie Butter."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Warum ist Salz beim Backen wichtig?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Salz verstärkt nicht nur den Geschmack, sondern stabilisiert auch die Teigstruktur und sorgt dafür, dass Hefe und andere Triebmittel optimal arbeiten."
+        }
+      }
+    ]
+  }
+  </script>
 </head>
 
 <body>
@@ -34,10 +81,10 @@
             <img src="/assets/img/Logo.webp" alt="Logo von Backen einfach erklärt" class="Logo">
             <nav aria-label="Hauptnavigation">
                 <a href="/pages/index.html">Home</a>
-                <a href="/pages/Blog.html">Blog</a>
-                <a href="/pages/Rezepte.html">Rezepte</a>
-                <a href="/pages/Lexikon.html">Lexikon</a>
-                <a href="/pages/Über-uns.html">Über uns</a>
+                <a href="/pages/blog.html">Blog</a>
+                <a href="/pages/rezepte.html">Rezepte</a>
+                <a href="/pages/lexikon.html">Lexikon</a>
+                <a href="/pages/über-uns.html">Über uns</a>
             </nav>
         </header>
 
@@ -180,16 +227,17 @@
               </div>
               
         </section>
-        <nav class="back-to-blog-nav" aria-label="Zurück zum Blog">
-          <a href="/pages/Blog.html" class="back-to-blog" aria-label="Zurück zur Blogübersicht">&larr; Zurück zum Blog</a>
+        <nav class="back-to-blog-nav" aria-label="Zurück zum Blog" style="margin:2.5em 0 1.5em 0;">
+          <a href="/pages/blog.html" class="back-to-blog" aria-label="Zurück zur Blogübersicht" style="display:inline-block;padding:0.5em 1.2em 0.5em 1.2em;background:#f7f3ed;border-left:4px solid #A0522D;border-radius:1em;color:#4a3b2a;font-weight:600;text-decoration:none;box-shadow:0 2px 8px rgba(160,82,45,0.07);transition:background 0.18s,color 0.18s;">&larr; Zurück zum Blog</a>
         </nav>
+        
         <!-- Footer-Bereich -->
         <footer> 
             <nav aria-label="Footer-Navigation">
-                <a href="/pages/Impressum.html">Impressum</a>
-                <a href="/pages/Datenschutz.html">Datenschutz</a>
-                <a href="/pages/Cookies.html">Cookies</a>
-                <a href="/pages/Kontakt.html">Kontakt</a>
+                <a href="/pages/impressum.html">Impressum</a>
+                <a href="/pages/datenschutz.html">Datenschutz</a>
+                <a href="/pages/cookies.html">Cookies</a>
+                <a href="/pages/kontakt.html">Kontakt</a>
             </nav>
             <p>&copy;2025 Backen einfach erklärt. Alle Rechte vorbehalten.</p> <!-- Copyright-Hinweis -->
         </footer>

@@ -57,7 +57,30 @@ document.addEventListener("DOMContentLoaded", () => {
     const lexikonButton = document.getElementById("LexikonButton");
     if (lexikonButton) {
         lexikonButton.addEventListener("click", () => {
-            window.location.href = "/pages/Lexikon.html";
+            window.location.href = "/pages/lexikon.html";
         });
     }
 });
+
+// Portionsrechner-Funktion für Rezepte
+// Erwartet: grundMengen = [Zahlen], inputId = String, zutatPrefix = String
+// Beispiel: setupPortionenRechner([110,80,20,...], 'portionen-input', 'zutat-')
+function setupPortionenRechner(grundMengen, inputId, zutatPrefix) {
+    const input = document.getElementById(inputId);
+    if (!input) return;
+    function updateZutatenMengen() {
+        const faktor = parseInt(input.value) || 1;
+        grundMengen.forEach((menge, i) => {
+            const zutat = document.getElementById(zutatPrefix + i);
+            if (zutat) {
+                zutat.textContent = (menge * faktor).toLocaleString('de-DE');
+            }
+        });
+    }
+    input.addEventListener('input', updateZutatenMengen);
+    updateZutatenMengen();
+}
+
+// Beispielaufruf der Portionsrechner-Funktion
+// Beispielaufruf der Funktion mit Grundmengen für 4 Personen
+// setupPortionenRechner([250, 150, 100], 'portionen-input', 'zutat-');

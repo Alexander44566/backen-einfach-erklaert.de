@@ -23,7 +23,54 @@
   <link rel="stylesheet" href="/styles/blog.css"> <!-- Verlinkung der Blog-spezifischen CSS-Datei -->
   <link rel="icon" href="/assets/img/Favicon.ico" type="image/x-icon">
   <script src="/scripts/general.js"></script> <!-- Verlinkung der allgemeinen Javascript-Datei -->
-  <script src="/scripts/blogButtons.js"></script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Was ist Sauerteig?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Sauerteig ist ein natürlicher Teigansatz aus Mehl und Wasser, in dem Milchsäurebakterien und wilde Hefen durch Fermentation einen aktiven Starter für Brot und Gebäck bilden."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Wie stelle ich Sauerteig her?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Mehl und Wasser werden über mehrere Tage gemischt und bei Raumtemperatur stehen gelassen. Dabei entwickeln sich Mikroorganismen, die den Teig säuern und lockern."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Wie pflege ich meinen Sauerteig-Starter?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Sauerteig sollte regelmäßig mit frischem Mehl und Wasser gefüttert werden. Im Kühlschrank reicht meist eine Fütterung pro Woche, bei Raumtemperatur öfter."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Welche Vorteile hat Sauerteigbrot?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Sauerteigbrot ist aromatisch, bekömmlich, enthält weniger Phytinsäure und bleibt länger frisch. Es ist oft besser verträglich als Brot mit Industriehefe."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Was kann ich mit Sauerteig-Discard machen?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Überschüssiger Sauerteig (Discard) kann für Pancakes, Waffeln, Cracker oder Kuchen verwendet werden – so wird nichts verschwendet." 
+        }
+      }
+    ]
+  }
+  </script>
 </head>
 
 <body>
@@ -34,10 +81,10 @@
             <img src="/assets/img/Logo.webp" alt="Logo von Backen einfach erklärt" class="Logo">
             <nav aria-label="Hauptnavigation">
                 <a href="/pages/index.html">Home</a>
-                <a href="/pages/Blog.html">Blog</a>
-                <a href="/pages/Rezepte.html">Rezepte</a>
-                <a href="/pages/Lexikon.html">Lexikon</a>
-                <a href="/pages/Über-uns.html">Über uns</a>
+                <a href="/pages/blog.html">Blog</a>
+                <a href="/pages/rezepte.html">Rezepte</a>
+                <a href="/pages/lexikon.html">Lexikon</a>
+                <a href="/pages/über-uns.html">Über uns</a>
             </nav>
         </header>
 
@@ -48,6 +95,11 @@
                 <h1 class="content-title" itemprop="headline">Sauerteig – Magie aus Mehl, Wasser &amp; Zeit</h1>
                 <p class="lead" itemprop="description">Sauerteig ist mehr als nur ein Teig: Er ist lebendig, gesund, aromatisch und ein Stück Kulturerbe. Hier erfährst du alles über Herstellung, Pflege, Arten und Vorteile – einfach erklärt!</p>
                 <time datetime="2025-05-24" itemprop="datePublished" style="margin-bottom:1.2rem;display:block;">24. Mai 2025</time>
+                <!-- SEO-optimiertes Bild zum Artikel -->
+                <figure style="margin:0 0 2em 0;text-align:center;">
+                  <img src="/assets/img/Sauerteig.webp" alt="Frischer Sauerteig in einem Glas, bereit zum Backen von aromatischem Brot" itemprop="image" style="max-width:420px;width:100%;height:auto;border-radius:1em;box-shadow:0 2px 12px rgba(160,82,45,0.10);">
+                  <figcaption style="font-size:0.98em;color:#6a5d4d;margin-top:0.5em;">Sauerteig: Die Basis für natürliches, aromatisches Brot</figcaption>
+                </figure>
               
                 <h2 id="sauerteig-title"><span aria-hidden="true" class="list-icon">🥖</span> Sauerteig – Magie aus Mehl, Wasser &amp; Zeit</h2>
                 <p>Der Duft von frisch gebackenem Brot. Eine knusprige Kruste. Ein lockerer, leicht säuerlicher Biss. Wer einmal echtes Sauerteigbrot probiert hat, spürt: <strong>Das ist mehr als nur Brot – das ist Kultur, Zeitgeist und Handwerk in einem.</strong></p>
@@ -156,18 +208,18 @@
               </div>
               
         </section>
-        <nav class="back-to-blog-nav" aria-label="Zurück zum Blog">
-          <a href="/pages/Blog.html" class="back-to-blog" aria-label="Zurück zur Blogübersicht">&larr; Zurück zum Blog</a>
+        <nav class="back-to-blog-nav" aria-label="Zurück zum Blog" style="margin:2.5em 0 1.5em 0;">
+          <a href="/pages/blog.html" class="back-to-blog" aria-label="Zurück zur Blogübersicht" style="display:inline-block;padding:0.5em 1.2em 0.5em 1.2em;background:#f7f3ed;border-left:4px solid #A0522D;border-radius:1em;color:#4a3b2a;font-weight:600;text-decoration:none;box-shadow:0 2px 8px rgba(160,82,45,0.07);transition:background 0.18s,color 0.18s;">&larr; Zurück zum Blog</a>
         </nav>
         
         <!-- Footer-Bereich -->
         <footer> 
             <!-- Navigation im Footer -->
             <nav>
-                <a href="/pages/Impressum.html">Impressum</a>
-                <a href="/pages/Datenschutz.html">Datenschutz</a>
-                <a href="/pages/Cookies.html">Cookies</a>
-                <a href="/pages/Kontakt.html">Kontakt</a>
+                <a href="/pages/impressum.html">Impressum</a>
+                <a href="/pages/datenschutz.html">Datenschutz</a>
+                <a href="/pages/cookies.html">Cookies</a>
+                <a href="/pages/kontakt.html">Kontakt</a>
             </nav>
             <p>&copy;2025 Backen einfach erklärt. Alle Rechte vorbehalten.</p> <!-- Copyright-Hinweis -->
         </footer>

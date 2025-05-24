@@ -7,10 +7,31 @@ body {
 }
 
 .content-block {
+    position: relative;
     text-align: left; // Text innerhalb der Content-Blöcke linksbündig
     padding: 2rem; // Optional: Zusätzlicher Innenabstand für bessere Lesbarkeit
+    padding-bottom: 2.2em;
     line-height: 1.8; // Optional: Angenehmer Zeilenabstand für längere Texte
-    position: relative; // Für die Positionierung des Zeitstempels
+}
+
+.content-block time[itemprop="datePublished"] {
+    position: absolute;
+    right: 1.2em;
+    bottom: 1.2em;
+    font-size: 0.98em;
+    color: #7a6a5a;
+    background: transparent;
+    padding: 0;
+    margin: 0;
+}
+
+@media (max-width: 600px) {
+    .content-block time[itemprop="datePublished"] {
+        position: static;
+        display: block;
+        margin: 0.7em 0 0.2em 0;
+        text-align: right;
+    }
 }
 
 .content-block h2, 
@@ -59,10 +80,8 @@ table th {
         border-radius: 5px;
         transition: all 0.3s ease;
 
-        &:hover {
-            background-color: $HightlightText-color;
-            color: white;
-        }
+        // Hinweis: Die HTML-Links für die Pagination wurden bereits auf kleingeschriebene Dateinamen umgestellt.
+        // In diesem SCSS ist keine direkte Link-URL enthalten, daher ist keine weitere Anpassung nötig.
     }
 
     .current-page {
@@ -74,66 +93,7 @@ table th {
     }
 }
 
-// Zeitstempel im Blogartikel unten rechts positionieren
-.content-block time {
-  position: absolute;
-  bottom: 1.2rem;
-  right: 1.5rem;
-  background: none;
-  color: #8B4513;
-  font-size: 0.85rem;
-  font-style: italic;
-  padding: 0;
-  border-radius: 0;
-  box-shadow: none;
-  z-index: 2;
-  letter-spacing: 0.02em;
-  opacity: 0.6; // Schrift transparenter
-}
-
-// Zurück-zum-Blog-Link Styling
-.back-to-blog-nav {
-  display: flex;
-  justify-content: flex-start;
-  margin: 0 0 2.5rem 0;
-}
-
-.back-to-blog {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5em;
-  background: none;
-  color: $HightlightText-color;
-  font-weight: 700;
-  font-size: 1.1rem;
-  padding: 0.7em 1.6em 0.7em 0.7em;
-  border-radius: 2em;
-  border: none;
-  text-decoration: underline;
-  box-shadow: none;
-  transition: color 0.2s, background 0.2s;
-  position: relative;
-}
-
-.back-to-blog::after {
-  content: '';
-  display: none;
-}
-
-.back-to-blog:hover, .back-to-blog:focus {
-  color: darken($HightlightText-color, 10%);
-  background: #fffbe6;
-  outline: none;
-  text-decoration: none;
-}
-
-.back-to-blog:active {
-  color: darken($HightlightText-color, 20%);
-}
-
-@media (max-width: 600px) {
-  .back-to-blog {
-    font-size: 1rem;
-    padding: 0.6em 1em 0.6em 0.6em;
-  }
+.content-button {
+    text-decoration: none !important;
+    border-bottom: none !important;
 }

@@ -478,4 +478,290 @@ table th {
   padding: 0.5rem 1rem;
   border-radius: 5px;
   font-weight: bold;
+}
+
+.back-to-blog-nav {
+  display: flex;
+  justify-content: flex-start;
+  margin: 0 0 2.5rem 0;
+}
+
+.back-to-blog {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5em;
+  background: none;
+  color: #A0522D;
+  font-weight: 700;
+  font-size: 1.1rem;
+  padding: 0.7em 1.6em 0.7em 0.7em;
+  border-radius: 2em;
+  border: none;
+  text-decoration: underline;
+  box-shadow: none;
+  transition: color 0.2s, background 0.2s;
+  position: relative;
+}
+
+.back-to-blog::after {
+  content: "";
+  display: none;
+}
+
+.back-to-blog:hover, .back-to-blog:focus {
+  color: #783e22;
+  background: #fffbe6;
+  outline: none;
+  text-decoration: none;
+}
+
+.back-to-blog:active {
+  color: #502917;
+}
+
+@media (max-width: 600px) {
+  .back-to-blog {
+    font-size: 1rem;
+    padding: 0.6em 1em 0.6em 0.6em;
+  }
+}
+.portion-rechner {
+  background: #A0522D;
+  border: none;
+  border-radius: 1.2em;
+  padding: 1.2em 1.5em;
+  margin: 2.2em 0 2.5em 0;
+  box-shadow: 0 2px 10px rgba(160, 82, 45, 0.1);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 1.2em;
+  flex-wrap: wrap;
+}
+.portion-rechner h2, .portion-rechner label {
+  color: #fff;
+}
+.portion-rechner h2 {
+  font-size: 1.15em;
+  font-weight: 700;
+  margin: 0;
+  letter-spacing: 0.01em;
+  flex-shrink: 0;
+}
+.portion-rechner label {
+  font-size: 1em;
+  font-weight: 500;
+  margin: 0 0.5em 0 0;
+  flex-shrink: 0;
+}
+.portion-rechner input[type=number] {
+  font-size: 1.1em;
+  font-family: inherit;
+  width: 4.5em;
+  padding: 0.3em 0.7em;
+  border: 1.5px solid #fff;
+  border-radius: 0.5em;
+  background: rgba(255, 255, 255, 0.15);
+  color: #fff;
+  box-shadow: 0 1px 4px rgba(160, 82, 45, 0.1);
+  margin-left: 0.2em;
+  transition: border 0.2s, box-shadow 0.2s, background 0.2s;
+}
+.portion-rechner input[type=number]:focus {
+  border-color: #fff;
+  outline: none;
+  background: #fff;
+  color: #A0522D;
+}
+.portion-rechner input[type=number]::-moz-placeholder {
+  color: #fff;
+  opacity: 0.7;
+}
+.portion-rechner input[type=number]::placeholder {
+  color: #fff;
+  opacity: 0.7;
+}
+@media (max-width: 600px) {
+  .portion-rechner input[type=number] {
+    width: 3.5em;
+    font-size: 1em;
+  }
+}
+.portion-rechner .portion-info {
+  display: block;
+  margin-top: 0.5em;
+  font-size: 0.98em;
+  color: #fff;
+  opacity: 0.85;
+  font-style: italic;
+  max-width: 32em;
+}
+@media (max-width: 600px) {
+  .portion-rechner {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.7em;
+  }
+}
+
+.rezept-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2em;
+  background: #f7f3ed;
+  border-radius: 1.2em;
+  padding: 1.1em 1.5em 0.7em 1.5em;
+  margin: 2em 0 1.5em 0;
+  font-size: 1.08em;
+  box-shadow: 0 2px 10px rgba(160, 82, 45, 0.07);
+  border-left: 5px solid #A0522D;
+}
+.rezept-info li {
+  min-width: 180px;
+  margin-bottom: 0.5em;
+  /* Neue Regel für gleichmäßige Einrückung */
+  list-style-position: inside;
+  padding-left: 0.5em;
+  text-indent: -0.5em;
+}
+.rezept-info li strong {
+  color: #A0522D;
+  font-weight: 700;
+}
+.rezept-info .zeit-row {
+  display: flex;
+  flex-direction: row;
+  gap: 2em;
+  margin-bottom: 0.2em;
+  background: none;
+  border: none;
+  box-shadow: none;
+  padding: 0;
+}
+.rezept-info .zeit-row .zeit-block {
+  font-size: 1.08em;
+  font-weight: 600;
+  color: #A0522D;
+  background: #f3ede7;
+  border-radius: 0.7em;
+  padding: 0.3em 1em;
+  margin-right: 0.5em;
+  display: inline-block;
+}
+.rezept-info .zeit-details {
+  margin-left: 0.5em;
+  font-size: 1em;
+  color: #6b4a2d;
+  margin-bottom: 0.1em;
+  background: none;
+  border: none;
+  box-shadow: none;
+  padding: 0;
+}
+@media (max-width: 600px) {
+  .rezept-info .zeit-row {
+    flex-direction: column;
+    gap: 0.3em;
+  }
+  .rezept-info .zeit-row .zeit-block {
+    width: 100%;
+    margin-right: 0;
+  }
+}
+
+.naehrwerte {
+  background: #fff;
+  border-left: 4px solid #A0522D;
+  border-radius: 1em;
+  box-shadow: 0 2px 8px rgba(160, 82, 45, 0.07);
+  color: #4a3b2a;
+  font-size: 1.04em;
+  line-height: 1.6;
+  padding: 1em 1.2em 1em 2.2em;
+  margin: 2em 0 2em 0;
+}
+.naehrwerte strong {
+  font-size: 1.08em;
+  letter-spacing: 0.01em;
+}
+.naehrwerte ul {
+  margin: 0.7em 0 0.5em 0.2em;
+  padding: 0;
+  list-style: disc inside;
+  font-size: 1em;
+}
+.naehrwerte small {
+  font-size: 0.97em;
+  color: #7a6a5a;
+}
+
+.content-button {
+  text-decoration: none !important;
+  border-bottom: none !important;
+}
+
+@media print {
+  body, html {
+    background: #fff !important;
+    color: #222 !important;
+    font-family: "Georgia", serif !important;
+    font-size: 12pt !important;
+    line-height: 1.6 !important;
+  }
+  header, nav, .back-to-blog-nav, footer, button, input, .portion-rechner {
+    display: none !important;
+  }
+  .content-block, .rezept-info, .naehrwerte, .zutaten-liste, .zubereitung-liste {
+    background: #fff !important;
+    color: #222 !important;
+    box-shadow: none !important;
+    border-radius: 0 !important;
+    padding: 0 !important;
+    margin: 0 0 1.2em 0 !important;
+  }
+  .content-block h1, .content-block h2, .content-block h3 {
+    color: #111 !important;
+    margin-top: 1.2em !important;
+    margin-bottom: 0.5em !important;
+    page-break-after: avoid;
+  }
+  .content-block p, .content-block ul, .content-block ol {
+    color: #222 !important;
+    margin-bottom: 0.7em !important;
+  }
+  .tipp {
+    border: 1px solid #888;
+    background: #f9f9f9 !important;
+    color: #000 !important;
+    padding: 0.7em 1em !important;
+    margin: 1em 0 !important;
+  }
+  img {
+    max-width: 100% !important;
+    height: auto !important;
+    box-shadow: none !important;
+    margin: 0 0 1em 0 !important;
+    border-radius: 0 !important;
+    display: block;
+    page-break-inside: avoid;
+  }
+  a {
+    color: #222 !important;
+    text-decoration: underline !important;
+    word-break: break-all;
+  }
+  .naehrwerte strong {
+    font-size: 1.1em;
+    color: #111 !important;
+  }
+  .zutaten-liste, .zubereitung-liste {
+    list-style-position: inside !important;
+    padding-left: 0 !important;
+  }
+  .zutaten-liste li, .zubereitung-liste li {
+    margin-bottom: 0.3em !important;
+  }
+  @page {
+    margin: 1.5cm;
+  }
 }/*# sourceMappingURL=rezept.css.map */

@@ -1,0 +1,15 @@
+.content-button {
+  text-decoration: none !important;
+  border-bottom: none !important;
+  outline: none;
+  box-shadow: none;
+}
+
+.content-button:visited,
+.content-button:active,
+.content-button:focus {
+  text-decoration: none !important;
+  border-bottom: none !important;
+  outline: none;
+  box-shadow: none;
+}

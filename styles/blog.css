@@ -418,12 +418,32 @@ body {
 }
 
 .content-block {
+  position: relative;
   text-align: left;
   padding: 2rem;
+  padding-bottom: 2.2em;
   line-height: 1.8;
-  position: relative;
 }
 
+.content-block time[itemprop=datePublished] {
+  position: absolute;
+  right: 1.2em;
+  bottom: 1.2em;
+  font-size: 0.98em;
+  color: #7a6a5a;
+  background: transparent;
+  padding: 0;
+  margin: 0;
+}
+
+@media (max-width: 600px) {
+  .content-block time[itemprop=datePublished] {
+    position: static;
+    display: block;
+    margin: 0.7em 0 0.2em 0;
+    text-align: right;
+  }
+}
 .content-block h2,
 .content-block h3,
 .content-block h4,
@@ -469,10 +489,6 @@ table th {
   border-radius: 5px;
   transition: all 0.3s ease;
 }
-.pagination .page-link:hover {
-  background-color: #A0522D;
-  color: white;
-}
 .pagination .current-page {
   color: white;
   background-color: #A0522D;
@@ -481,64 +497,7 @@ table th {
   font-weight: bold;
 }
 
-.content-block time {
-  position: absolute;
-  bottom: 1.2rem;
-  right: 1.5rem;
-  background: none;
-  color: #8B4513;
-  font-size: 0.85rem;
-  font-style: italic;
-  padding: 0;
-  border-radius: 0;
-  box-shadow: none;
-  z-index: 2;
-  letter-spacing: 0.02em;
-  opacity: 0.6;
-}
-
-.back-to-blog-nav {
-  display: flex;
-  justify-content: flex-start;
-  margin: 0 0 2.5rem 0;
-}
-
-.back-to-blog {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5em;
-  background: none;
-  color: #A0522D;
-  font-weight: 700;
-  font-size: 1.1rem;
-  padding: 0.7em 1.6em 0.7em 0.7em;
-  border-radius: 2em;
-  border: none;
-  text-decoration: underline;
-  box-shadow: none;
-  transition: color 0.2s, background 0.2s;
-  position: relative;
-}
-
-.back-to-blog::after {
-  content: "";
-  display: none;
-}
-
-.back-to-blog:hover, .back-to-blog:focus {
-  color: #783e22;
-  background: #fffbe6;
-  outline: none;
-  text-decoration: none;
-}
-
-.back-to-blog:active {
-  color: #502917;
-}
-
-@media (max-width: 600px) {
-  .back-to-blog {
-    font-size: 1rem;
-    padding: 0.6em 1em 0.6em 0.6em;
-  }
+.content-button {
+  text-decoration: none !important;
+  border-bottom: none !important;
 }/*# sourceMappingURL=blog.css.map */

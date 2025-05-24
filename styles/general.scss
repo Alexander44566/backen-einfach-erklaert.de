@@ -12,7 +12,7 @@
 // Farben
 $Text-color: black;
 $SecondText-color: #3D3D3D;
-$HightlightText-color: #A0522D;
+$HighlightText-color: #A0522D;
 $Background-color: #E6D3B3;
 $SecondBackground-color: #D2B48C;
 
@@ -64,7 +64,7 @@ header {
 
         a {
             text-decoration: none; // Entfernt die Unterstreichung
-            color: $HightlightText-color; // Standardfarbe für Links
+            color: $HighlightText-color; // Standardfarbe für Links
             font-size: 1rem;
             padding: 0.5rem 1rem;
             border-radius: 20px; // Für den ovalen Kreis
@@ -110,20 +110,20 @@ header {
 // Navigation
 header nav a {
     text-decoration: none; // Entfernt die Standard-Unterstreichung
-    color: $HightlightText-color; // Standardfarbe für Links
+    color: $HighlightText-color; // Standardfarbe für Links
     font-size: 1rem;
     padding: 0.5rem 1rem;
     border-radius: 20px; // Für den ovalen Kreis
     transition: all 0.3s ease;
 
     &:hover {
-        background-color: rgba($HightlightText-color, 0.2); // Hintergrund mit fast vollständiger Transparenz
-        color: $HightlightText-color; // Text bleibt in der Highlight-Farbe
+        background-color: rgba($HighlightText-color, 0.2); // Hintergrund mit fast vollständiger Transparenz
+        color: $HighlightText-color; // Text bleibt in der Highlight-Farbe
         text-decoration: none; // Keine Unterstreichung
     }
 
     &.active {
-        background-color: $HightlightText-color; // Hintergrundfarbe für die aktive Seite
+        background-color: $HighlightText-color; // Hintergrundfarbe für die aktive Seite
         color: white; // Weiße Schriftfarbe
         font-weight: bold; // Optional: Fett für die aktive Seite
         text-decoration: none; // Entfernt die Unterstreichung bei aktiven Links
@@ -131,7 +131,7 @@ header nav a {
 }
 
 header nav a.active {
-    background-color: $HightlightText-color; // Nutzt die Highlight-Farbe aus der SCSS-Variable
+    background-color: $HighlightText-color; // Nutzt die Highlight-Farbe aus der SCSS-Variable
     color: white; // Weiße Schriftfarbe
     font-weight: bold; // Optional: Fett für die aktive Seite
     padding: 0.5rem 1rem; // Polsterung für den Text
@@ -210,13 +210,13 @@ footer {
 
     a {
         text-decoration: none;
-        color: $HightlightText-color;
+        color: $HighlightText-color;
         font-size: 0.9rem;
         margin: 0.5rem;
 
         &:hover {
             text-decoration: underline;
-            text-decoration-color: $HightlightText-color;
+            text-decoration-color: $HighlightText-color;
         }
     }
 

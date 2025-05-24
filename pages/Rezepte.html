@@ -8,9 +8,53 @@
     <meta name="author" content="Backen einfach erklärt">
     <title>Rezepte – Backen einfach erklärt</title>
     <link rel="stylesheet" href="/styles/general.css">  <!-- Verlinkung der allgemeinen CSS-Datei -->
+    <link rel="stylesheet" href="/styles/rezepte.css"> <!-- Verlinkung der Rezept-spezifischen CSS-Datei -->
     <link rel="icon" href="/assets/img/Favicon.ico" type="image/x-icon">
     <script src="/scripts/general.js"></script> <!-- Verlinkung der allgemeinen Javascript-Datei -->
-    <script src="/scripts/rezeptButton.js"></script> <!-- Verlinkung der Rezept-spezifischen Javascript-Datei -->
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Rezepte – Backen einfach erklärt">
+    <meta property="og:description" content="Entdecke köstliche Backrezepte für Anfänger und Hobbybäcker. Von einfachen Kuchen bis zu anspruchsvollen Broten – hier findest du alles!">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://backen-einfach-erklaert.de/pages/rezepte.html">
+    <meta property="og:image" content="/assets/img/Logo.webp">
+    <link rel="canonical" href="https://backen-einfach-erklaert.de/pages/rezepte.html">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "CollectionPage",
+      "name": "Rezepte – Backen einfach erklärt",
+      "description": "Entdecke köstliche Backrezepte für Anfänger und Hobbybäcker. Von einfachen Kuchen bis zu anspruchsvollen Broten – hier findest du alles!",
+      "url": "https://backen-einfach-erklaert.de/pages/rezepte.html",
+      "image": "/assets/img/Logo.webp",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Welche Rezepte finde ich auf dieser Seite?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Du findest hier einfache und anspruchsvolle Backrezepte – von Brot über Kuchen bis zu saisonalen Spezialitäten."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Sind die Rezepte für Anfänger geeignet?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Ja, alle Rezepte sind Schritt für Schritt erklärt und auch für Anfänger geeignet."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Gibt es auch Rezepte für spezielle Ernährungsformen?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Es gibt Rezepte für verschiedene Bedürfnisse, z.B. glutenfrei, vegan oder laktosefrei."
+          }
+        }
+      ]
+    }
+    </script>
 </head>
 
 <body>
@@ -21,36 +65,35 @@
             <img src="/assets/img/Logo.webp" alt="Logo von Backen einfach erklärt" class="Logo">
             <nav aria-label="Hauptnavigation">
                 <a href="/pages/index.html">Home</a>
-                <a href="/pages/Blog.html">Blog</a>
-                <a href="/pages/Rezepte.html">Rezepte</a>
-                <a href="/pages/Lexikon.html">Lexikon</a>
-                <a href="/pages/Über-uns.html">Über uns</a>
+                <a href="/pages/blog.html">Blog</a>
+                <a href="/pages/rezepte.html">Rezepte</a>
+                <a href="/pages/lexikon.html">Lexikon</a>
+                <a href="/pages/über-uns.html">Über uns</a>
             </nav>
         </header>
 
         <section>
           <div class="content-block">
-                <h3 class="content-title">Winterbrot</h3>
-                <img class="content-image" src="/assets/img/Logo.webp" alt="Frisch gebackenes Winterbrot auf einem Holzbrett, umgeben von winterlichen Zutaten">
+                <h3 class="content-title">Winterbrot – Dein Wohlfühlbrot für kalte Tage!</h3>
+                <!-- TODO: Bild von Winterbrot ersetzen, aktuell Platzhalter (Sauerteig.webp) -->
+                <img class="content-image" src="/assets/img/Sauerteig.webp" alt="Frisch gebackenes Winterbrot mit Nüssen und winterlichen Gewürzen auf einem Holzbrett" loading="lazy">
                 <p class="content-text">
-                    Das Winterbrot ist ein herzhaftes, rustikales Brot, das perfekt für die kalte Jahreszeit geeignet ist.
-                    Es enthält Zutaten wie Nüsse und Lebkuchengewürze, die ihm einen besonderen Geschmack verleihen.
+                    Lust auf ein Brot, das nach Gemütlichkeit schmeckt? Unser Winterbrot bringt dir knusprige Nüsse und feine Gewürze direkt auf den Tisch – super einfach, super lecker und perfekt für die kalte Jahreszeit. Jetzt ausprobieren und verlieben!
                 </p>
-                <button class="content-button" aria-label="Zum Rezept" id="winterbrotButton">Zum Rezept</button>
+                <a href="/pages/rezepte/winterbrot.html" class="content-button" aria-label="Zum Winterbrot-Rezept" id="winterbrotButton">👉 Zum Winterbrot-Rezept</a>
             </div>
             <div></div>
             <div></div>
             <div></div>
         </section>
-        
          <!-- Footer-Bereich -->
         <footer> 
             <!-- Navigation im Footer -->
             <nav aria-label="Footer-Navigation">
-                <a href="/pages/Impressum.html">Impressum</a>
-                <a href="/pages/Datenschutz.html">Datenschutz</a>
-                <a href="/pages/Cookies.html">Cookies</a>
-                <a href="/pages/Kontakt.html">Kontakt</a>
+                <a href="/pages/impressum.html">Impressum</a>
+                <a href="/pages/datenschutz.html">Datenschutz</a>
+                <a href="/pages/cookies.html">Cookies</a>
+                <a href="/pages/kontakt.html">Kontakt</a>
             </nav>
             <p>&copy;2025 Backen einfach erklärt. Alle Rechte vorbehalten.</p> <!-- Copyright-Hinweis -->
         </footer>

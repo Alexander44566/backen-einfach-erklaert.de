@@ -11,7 +11,6 @@
     <link rel="stylesheet" href="/styles/blog.css"> <!-- Verlinkung der Blog-spezifischen CSS-Datei -->
     <link rel="icon" href="/assets/img/Favicon.ico" type="image/x-icon">
     <script src="/scripts/general.js"></script> <!-- Verlinkung der allgemeinen Javascript-Datei -->
-    <script src="/scripts/blogButtons.js"></script>
 </head>
 
 <body>
@@ -22,18 +21,19 @@
             <img src="/assets/img/Logo.webp" alt="Logo von Backen einfach erklärt" class="Logo">
             <nav aria-label="Hauptnavigation">
                 <a href="/pages/index.html">Home</a>
-                <a href="/pages/Blog.html">Blog</a>
-                <a href="/pages/Rezepte.html">Rezepte</a>
-                <a href="/pages/Lexikon.html">Lexikon</a>
-                <a href="/pages/Über-uns.html">Über uns</a>
+                <a href="/pages/blog.html">Blog</a>
+                <a href="/pages/rezepte.html">Rezepte</a>
+                <a href="/pages/lexikon.html">Lexikon</a>
+                <a href="/pages/über-uns.html">Über uns</a>
             </nav>
         </header>
 
         <section aria-labelledby="blog-title">
-            <div class="pagination">
-                <a href="/pages/Blog.html" class="page-link">1</a>
-                <span class="current-page">2</span>
-                <a href="/pages/Blog-3.html" class="page-link">3</a>
+            <h2 id="blog-title" style="font-size:1.4em;margin:1.2em 0 1.5em 0;letter-spacing:0.01em;">Blogartikel</h2>
+            <div class="pagination" aria-label="Blogseiten-Navigation">
+                <a href="/pages/blog.html" class="page-link" aria-label="Seite 1">1</a>
+                <span class="current-page" aria-current="page" style="font-weight:bold;background:#f7f3ed;border-radius:0.7em;padding:0.2em 0.9em 0.2em 0.9em;color:#4a3b2a;border-left:4px solid #A0522D;">2</span>
+                <a href="/pages/blog-3.html" class="page-link" aria-label="Seite 3">3</a>
             </div>
         </section>
         
@@ -41,10 +41,10 @@
         <footer> 
             <!-- Navigation im Footer -->
             <nav aria-label="Footer-Navigation">
-                <a href="/pages/Impressum.html">Impressum</a>
-                <a href="/pages/Datenschutz.html">Datenschutz</a>
-                <a href="/pages/Cookies.html">Cookies</a>
-                <a href="/pages/Kontakt.html">Kontakt</a>
+                <a href="/pages/impressum.html">Impressum</a>
+                <a href="/pages/datenschutz.html">Datenschutz</a>
+                <a href="/pages/cookies.html">Cookies</a>
+                <a href="/pages/kontakt.html">Kontakt</a>
             </nav>
             <p>&copy;2025 Backen einfach erklärt. Alle Rechte vorbehalten.</p> <!-- Copyright-Hinweis -->
         </footer>
