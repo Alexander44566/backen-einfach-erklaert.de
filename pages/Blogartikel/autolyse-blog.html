@@ -11,7 +11,7 @@
   <meta property="og:title" content="Sauerteig – Magie aus Mehl, Wasser & Zeit">
   <meta property="og:description" content="Alles über Sauerteig: Tipps, Tricks und Hintergrundwissen für das perfekte Brot. Entdecke die Magie von Mehl, Wasser und Zeit!">
   <meta property="og:type" content="article">
-  <meta property="og:url" content="https://backen-einfach-erklaert.de/pages/blogartikel/autolyse-blog.html">
+  <meta property="og:url" content="https://backen-einfach-erklaert.de/Blogartikel/autolyse-blog">
   <meta property="og:image" content="/assets/img/Logo.webp">
   <!-- Strukturierte Daten (FAQPage, JSON-LD) für Autolyse-Blogartikel -->
   <script type="application/ld+json">
@@ -49,6 +49,7 @@
   <link rel="stylesheet" href="/styles/general.css">
   <link rel="stylesheet" href="/styles/blog.css">
   <link rel="icon" href="/assets/img/Favicon.ico" type="image/x-icon">
+  <link rel="canonical" href="https://backen-einfach-erklaert.de/Blogartikel/autolyse-blog">
   <script src="/scripts/general.js"></script>
 </head>
 
@@ -59,12 +60,16 @@
             <h1>Backen einfach erklärt</h1>
             <img src="/assets/img/Logo.webp" alt="Logo von Backen einfach erklärt" class="Logo">
             <nav aria-label="Hauptnavigation">
-                <a href="/pages/index.html">Home</a>
-                <a href="/pages/blog-s1.html">Blog</a>
-                <a href="/pages/rezepte.html">Rezepte</a>
-                <a href="/pages/lexikon.html">Lexikon</a>
-                <a href="/pages/über-uns.html">Über uns</a>
+                <a href="/Home">Home</a>
+                <a href="/Blog">Blog</a>
+                <a href="/Rezepte">Rezepte</a>
+                <a href="/Lexikon">Lexikon</a>
+                <a href="/Ueber-uns">Über uns</a>
             </nav>
+            <div class="search-container">
+                <input type="text" id="search-input" placeholder="Suche im Blog...">
+                <button id="search-button">🔍</button>
+            </div>
         </header>
 
         <section aria-labelledby="sauerteig-title">
@@ -108,17 +113,17 @@
               
         </section>
         <nav class="back-to-blog-nav" aria-label="Zurück zum Blog" style="margin:2.5em 0 1.5em 0;">
-          <a href="/pages/blog-s1.html" class="back-to-blog" aria-label="Zurück zur Blogübersicht" style="display:inline-block;padding:0.5em 1.2em 0.5em 1.2em;background:#f7f3ed;border-left:4px solid #A0522D;border-radius:1em;color:#4a3b2a;font-weight:600;text-decoration:none;box-shadow:0 2px 8px rgba(160,82,45,0.07);transition:background 0.18s,color 0.18s;">&larr; Zurück zum Blog</a>
+          <a href="/Blog-s1" class="back-to-blog" aria-label="Zurück zur Blogübersicht" style="display:inline-block;padding:0.5em 1.2em 0.5em 1.2em;background:#f7f3ed;border-left:4px solid #A0522D;border-radius:1em;color:#4a3b2a;font-weight:600;text-decoration:none;box-shadow:0 2px 8px rgba(160,82,45,0.07);transition:background 0.18s,color 0.18s;">&larr; Zurück zum Blog</a>
         </nav>
         
         <!-- Footer-Bereich -->
         <footer> 
             <!-- Navigation im Footer -->
-            <nav>
-                <a href="/pages/impressum.html">Impressum</a>
-                <a href="/pages/datenschutz.html">Datenschutz</a>
-                <a href="/pages/cookies.html">Cookies</a>
-                <a href="/pages/kontakt.html">Kontakt</a>
+            <nav aria-label="Footer-Navigation">
+                <a href="/Impressum">Impressum</a>
+                <a href="/Datenschutz">Datenschutz</a>
+                <a href="/Cookies">Cookies</a>
+                <a href="/Kontakt">Kontakt</a>
             </nav>
             <p>&copy;2025 Backen einfach erklärt. Alle Rechte vorbehalten.</p> <!-- Copyright-Hinweis -->
         </footer>
