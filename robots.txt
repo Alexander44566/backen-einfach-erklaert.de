@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://backen-einfach-erklaert.de/sitemap.xml

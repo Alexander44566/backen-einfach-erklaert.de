@@ -1,16 +1,46 @@
+<!-- HINWEIS: Diese Datei dient nur zum Zwischen-Hosting auf Netlify und ist nicht die finale Startseite der Website. -->
 <!DOCTYPE html>
 <html lang="de">
 <head>
     <meta charset="UTF-8">
+    <title>Home – Backen einfach erklärt</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Entdecke die Welt des Backens mit Tipps, Rezepten und Hintergrundwissen. Perfekt für Anfänger und Hobbybäcker!">
     <meta name="keywords" content="Backen, Rezepte, Sauerteig, Backzutaten, Backlexikon, Tipps">
     <meta name="author" content="Backen einfach erklärt">
-    <title>Home – Backen einfach erklärt</title>
+    <!-- Open Graph Meta-Tags für Social Media Vorschau -->
+    <meta property="og:title" content="Home – Backen einfach erklärt">
+    <meta property="og:description" content="Entdecke die Welt des Backens mit Tipps, Rezepten und Hintergrundwissen. Perfekt für Anfänger und Hobbybäcker!">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://backen-einfach-erklaert.de/">
+    <meta property="og:image" content="https://backen-einfach-erklaert.de/assets/img/Logo.webp">
+    <!-- SEO & strukturierte Daten für die Startseite -->
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "Backen einfach erklärt",
+  "url": "https://backen-einfach-erklaert.de/",
+  "description": "Entdecke die Welt des Backens mit Tipps, Rezepten und Hintergrundwissen. Perfekt für Anfänger und Hobbybäcker!",
+  "inLanguage": "de",
+  "publisher": {
+    "@type": "Organization",
+    "name": "Backen einfach erklärt",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://backen-einfach-erklaert.de/assets/img/Logo.webp"
+    }
+  },
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": "https://backen-einfach-erklaert.de/pages/rezepte.html?suche={search_term_string}",
+    "query-input": "required name=search_term_string"
+  }
+}
+</script>
     <link rel="stylesheet" href="/styles/general.css">  <!-- Verlinkung der allgemeinen CSS-Datei -->
     <link rel="icon" href="/assets/img/Favicon.ico" type="image/x-icon">
     <script src="/scripts/general.js"></script> <!-- Verlinkung der allgemeinen Javascript-Datei -->
-    <script src="/scripts/blogButtons.js"></script>
 </head>
 
 <body>
@@ -21,10 +51,10 @@
             <img src="/assets/img/Logo.webp" alt="Logo von Backen einfach erklärt" class="Logo">
             <nav aria-label="Hauptnavigation">
                 <a href="/pages/index.html">Home</a>
-                <a href="/pages/Blog.html">Blog</a>
-                <a href="/pages/Rezepte.html">Rezepte</a>
-                <a href="/pages/Lexikon.html">Lexikon</a>
-                <a href="/pages/Über-uns.html">Über uns</a>
+                <a href="/pages/blog-s1.html">Blog</a>
+                <a href="/pages/rezepte.html">Rezepte</a>
+                <a href="/pages/lexikon.html">Lexikon</a>
+                <a href="/pages/über-uns.html">Über uns</a>
             </nav>
         </header>
 
@@ -32,51 +62,37 @@
         <section>
           
             <div class="content-block">
-                <h2 class="content-title">Herzlich Willkommen auf <br>Backen einfach erklärt</h2>
+                <h2 class="content-title">Willkommen bei Backen einfach erklärt!</h2>
                 <p class="content-text">
-                    Entdecke die Welt des Backens in unserem Blog und Lexikon – voller Tipps, Tricks und Hintergrundwissen. Egal ob du gerade erst anfängst oder schon Profi bist:
-                    Mit unseren einfachen Rezepten lernst du spielend das Backen oder wagst dich an köstliche Herausforderungen wie Sauerteigbrote, Croissants & Co. Lass den Ofen glühen!
+                    Starte deine Backreise mit uns: Hier findest du Inspiration, Tipps und Rezepte, die wirklich gelingen – egal ob du gerade erst loslegst oder schon ein echter Ofenprofi bist. Entdecke neue Trends, klassische Brote und kreative Backideen. Lass dich begeistern und bring frischen Wind in deine Küche!
                 </p>
             </div>
 
-            <!-- Beispiel für einen Abschnitt mit Bild -->
+            <!-- Sauerteig-Block -->
             <div class="content-block">
-                <h2 class="content-title">Sauerteig</h2>
+                <h2 class="content-title">Sauerteig: Natürlich. Echt. Unvergleichlich.</h2>
                 <img class="content-image" src="/assets/img/Sauerteig.webp" alt="Ein Glas mit Sauerteigstarter">
-                <p class="content-text">Sauerteig besteht lediglich aus zwei Zutaten – Mehl und Wasser – und doch entsteht daraus etwas ganz Besonderes.
-                    In dieser Mischung entwickeln sich ganz natürlich wilde Hefen und Milchsäurebakterien, die sowohl im Mehl als auch in der Umgebungsluft vorkommen.
-                    Gemeinsam setzen sie eine Fermentation in Gang, die den Teig auflockert und ihm sein unverwechselbares Aroma verleiht.
-                    Das Ergebnis ist ein Brot, das nicht nur besonders luftig und geschmackvoll ist, sondern auch deutlich länger frisch bleibt.
-                    Zudem wird es durch den natürlichen Gärprozess bekömmlicher, da bestimmte Stoffe wie Gluten und Phytinsäure teilweise abgebaut werden.
-                    Mit etwas Zeit, Geduld und regelmäßigem „Füttern“ kannst du ganz einfach deinen eigenen Sauerteigstarter zu Hause ansetzen –
-                    ein spannender Prozess und ein echtes Herzensprojekt für alle, die gerne mit natürlichen Zutaten backen. 🍞✨</p>
-                    <button class="content-button" aria-label="Mehr über Sauerteig erfahren" id="sauerteigButton">Mehr zu Sauerteig</button>
+                <p class="content-text">Zwei Zutaten, unendliche Möglichkeiten: Mit Mehl und Wasser erschaffst du deinen eigenen Sauerteig – lebendig, aromatisch und voller Charakter. Erlebe, wie wilde Hefen und Milchsäurebakterien deinen Teig verwandeln. Backe Brote, die begeistern: luftig, saftig, lange frisch und besonders bekömmlich. Sauerteig ist Handwerk, Genuss und ein kleines Abenteuer für zu Hause. 🍞✨</p>
+                <a class="content-button" aria-label="Mehr über Sauerteig erfahren" id="sauerteigButton" href="/pages/blogartikel/sauerteig-blog.html">Sauerteig entdecken</a>
             </div>
 
-            <!-- Beispiel für einen Abschnitt mit Bild -->
+            <!-- Backzutaten-Block -->
             <div class="content-block">
-                <h2 class="content-title">Backzutaten im Überblick</h2>
+                <h2 class="content-title">Backzutaten: Die Basis für Genuss</h2>
                 <img class="content-image" src="/assets/img/Zutaten.webp" alt="Verschiedene Backzutaten wie Mehl, Eier und Zucker">
                 <p class="content-text">
-                    Beim Backen geht es nicht nur um Rezepte – sondern vor allem um die Zutaten, die du verwendest. Mehl, Wasser,
-                        Hefe oder Sauerteig, Salz, Zucker und Fett bilden die Basis nahezu jedes Gebäcks. Doch jede dieser Zutaten erfüllt ganz bestimmte Aufgaben:
-                        Sie beeinflussen nicht nur Geschmack und Konsistenz, sondern auch Struktur, Frischhaltung und sogar die Krustenbildung.
-                        Und auch zusätzliche Zutaten wie Milchprodukte, Eier, Gewürze oder Nüsse sorgen für Abwechslung und besondere Aromen. In diesem Beitrag zeigen wir dir,
-                        wie die wichtigsten Backzutaten wirken – und wie du sie gezielt einsetzt, um noch bessere Ergebnisse zu erzielen.
+                    Gutes Gebäck beginnt mit den richtigen Zutaten: Mehl, Wasser, Hefe, Salz, Zucker und Fett sind die Stars jeder Backstube. Doch erst das Zusammenspiel macht den Unterschied! Entdecke, wie du mit kleinen Kniffen und dem passenden Mix aus Klassikern und Extras wie Nüssen, Gewürzen oder Milchprodukten dein Backwerk auf das nächste Level hebst.
                 </p>
-                <button class="content-button" aria-label="Mehr über Backzutaten erfahren" id="ZutatenButton">Mehr zu den Backzutaten erfahren</button>
+                <a class="content-button" aria-label="Mehr über Backzutaten erfahren" id="ZutatenButton" href="/pages/blogartikel/zutaten-blog.html">Alles über Backzutaten</a>
             </div>
 
-            <!-- Beispiel für einen Abschnitt mit Bild -->
+            <!-- Lexikon-Block -->
             <div class="content-block">
-                <h2 class="content-title">Dein Backlexikon</h2>
+                <h2 class="content-title">Backlexikon: Wissen, das gelingt</h2>
                 <p class="content-text">
-                    Ob Anfänger oder passionierte Hobbybäcker: Im Backlexikon findest du alles, was du über Zutaten, Techniken und Fachbegriffe wissen musst.
-                    Von A wie Autolyse bis Z wie Zimmertemperatur – hier wird Backwissen verständlich erklärt. Du erfährst, was einzelne Zutaten im Teig bewirken,
-                    wie verschiedene Triebmittel funktionieren und warum Temperatur, Ruhezeiten und Verarbeitung eine so große Rolle spielen. Perfekt zum Nachschlagen,
-                    Lernen oder einfach zum Stöbern, wenn du tiefer in die Welt des Backens eintauchen willst.
+                    Von A wie Autolyse bis Z wie Zimmertemperatur: Im Backlexikon findest du alles, was du über Zutaten, Techniken und Fachbegriffe wissen musst. Kompakt, verständlich und direkt anwendbar – für alle, die mehr wissen und besser backen wollen. Stöbere, lerne und werde zum Backprofi!
                 </p>
-                <button class="content-button" aria-label="Backlexikon durchstöbern" id="LexikonButton">Lexikon durchstöbern</button>
+                <a class="content-button" aria-label="Backlexikon durchstöbern" id="LexikonButton" href="/pages/lexikon.html">Zum Backlexikon</a>
             </div>
         </section>
         
@@ -84,10 +100,10 @@
         <footer> 
             <!-- Navigation im Footer -->
             <nav role="navigation" aria-label="Fußnavigation">
-                <a href="/pages/Impressum.html">Impressum</a>
-                <a href="/pages/Datenschutz.html">Datenschutz</a>
-                <a href="/pages/Cookies.html">Cookies</a>
-                <a href="/pages/Kontakt.html">Kontakt</a>
+                <a href="/pages/impressum.html">Impressum</a>
+                <a href="/pages/datenschutz.html">Datenschutz</a>
+                <a href="/pages/cookies.html">Cookies</a>
+                <a href="/pages/kontakt.html">Kontakt</a>
             </nav>
             <p>&copy;2025 Backen einfach erklärt. Alle Rechte vorbehalten.</p> <!-- Copyright-Hinweis -->
         </footer>
