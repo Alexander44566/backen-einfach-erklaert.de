@@ -78,14 +78,15 @@ table th {
     font-weight: bold;
 }
 
-// Responsive Tabellen für Blogartikel
+// Tabelle Standard-Design für große Bildschirme
 .content-block table {
   width: 100%;
   border-collapse: collapse;
   margin-bottom: 2em;
-  overflow-x: auto;
-  display: block;
   max-width: 100%;
+  display: table;
+  font-size: 1em;
+  overflow-x: unset;
 }
 .content-block th,
 .content-block td {
@@ -94,6 +95,7 @@ table th {
   text-align: left;
   font-size: 1em;
 }
+// Responsive Tabellen für kleine Bildschirme
 @media (max-width: 700px) {
   .content-block table,
   .content-block thead,
@@ -136,6 +138,29 @@ table th {
     font-size: 0.98em;
   }
 }
+@media (max-width: 480px) {
+  .content-block table {
+    font-size: 0.75em;
+    max-width: 100vw;
+    overflow-x: auto;
+    display: block;
+  }
+  .content-block th,
+  .content-block td {
+    padding: 0.35em 0.35em;
+    font-size: 0.85em;
+  }
+}
+@media (max-width: 350px) {
+  .content-block table {
+    font-size: 0.6em;
+  }
+  .content-block th,
+  .content-block td {
+    padding: 0.2em 0.2em;
+    font-size: 0.7em;
+  }
+}
 
 .pagination {
     display: flex;
@@ -158,7 +183,7 @@ table th {
 
     .current-page {
         color: white;
-        background-color: $HightlightText-color;
+        background-color: $HighlightText-color;
         padding: 0.5rem 1rem;
         border-radius: 5px;
         font-weight: bold;

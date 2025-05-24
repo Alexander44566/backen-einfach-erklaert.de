@@ -509,14 +509,14 @@ table th {
 }
 
 .back-to-blog:hover, .back-to-blog:focus {
-  color: #783e22;
+  color: rgb(120.1951219512, 61.6, 33.8048780488);
   background: #fffbe6;
   outline: none;
   text-decoration: none;
 }
 
 .back-to-blog:active {
-  color: #502917;
+  color: rgb(80.3902439024, 41.2, 22.6097560976);
 }
 
 @media (max-width: 600px) {
@@ -572,10 +572,6 @@ table th {
   outline: none;
   background: #fff;
   color: #A0522D;
-}
-.portion-rechner input[type=number]::-moz-placeholder {
-  color: #fff;
-  opacity: 0.7;
 }
 .portion-rechner input[type=number]::placeholder {
   color: #fff;
@@ -764,4 +760,4 @@ table th {
   @page {
     margin: 1.5cm;
   }
-}/*# sourceMappingURL=rezept.css.map */
+}
