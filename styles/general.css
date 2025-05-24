@@ -194,6 +194,18 @@ footer p {
   color: #3D3D3D;
 }
 
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: color 0.2s;
+}
+
+a:hover, a:focus {
+  text-decoration: underline;
+  text-decoration-color: #A0522D;
+  color: #A0522D;
+}
+
 /* Mobile (bis 480px) */
 @media (max-width: 480px) {
   header {
@@ -412,4 +424,4 @@ footer p {
   footer p {
     font-size: 1.4rem;
   }
-}
+}/*# sourceMappingURL=general.css.map */
