@@ -1,0 +1,86 @@
+// lexikon.scss – Styles für das Backlexikon
+// ------------------------------------------
+// Importiere allgemeine Styles
+@import './general.scss';
+
+// Spezifische Anpassungen für Lexikon-Einträge
+.content-block.lexikon-eintrag {
+  background: $SecondBackground-color;
+  border: 1px solid $SecondText-color;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-bottom: 2.2em;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: left;
+  transition: box-shadow 0.2s, border 0.2s, background 0.2s;
+  h3 {
+    color: $HighlightText-color;
+    font-size: clamp(1.3rem, 2vw, 1.7rem);
+    margin-bottom: 1rem;
+    letter-spacing: 0.01em;
+    text-align: left;
+    width: 100%;
+  }
+  p {
+    font-size: clamp(1rem, 1.5vw, 1.2rem);
+    color: $Text-color;
+    line-height: 1.8;
+    margin: 0 auto 0.5rem auto;
+    max-width: 750px;
+    text-align: left;
+  }
+}
+
+// Überschrift des Lexikons
+.content-block > h2 {
+  color: $HighlightText-color;
+  font-size: clamp(2rem, 3vw, 2.7rem);
+  text-align: center;
+  margin-bottom: 2em;
+  letter-spacing: 0.01em;
+}
+
+// Suchfeld im Lexikon
+#lexikon-suche {
+  display: block;
+  margin: 2.5em auto 2em auto;
+  max-width: 350px;
+  width: 100%;
+  padding: 0.7em 1em;
+  border-radius: 8px;
+  border: 1.5px solid $SecondText-color;
+  font-size: 1.1em;
+  background: $SecondBackground-color;
+  color: $Text-color;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  transition: border 0.2s, box-shadow 0.2s;
+}
+#lexikon-suche:focus {
+  outline: none;
+  border: 1.5px solid $HighlightText-color;
+  box-shadow: 0 0 0 2px rgba($HighlightText-color, 0.15);
+}
+
+// Responsive Anpassungen
+@media (max-width: 700px) {
+  .content-block.lexikon-eintrag {
+    padding: 1.2em 1em 1em 1em;
+    font-size: 0.98em;
+  }
+  .content-block > h2 {
+    font-size: 1.4em;
+  }
+}
+@media (max-width: 480px) {
+  .content-block.lexikon-eintrag {
+    padding: 0.7em 0.5em 0.7em 0.5em;
+    font-size: 0.92em;
+  }
+  .content-block > h2 {
+    font-size: 1.1em;
+  }
+}

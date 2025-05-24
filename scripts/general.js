@@ -41,35 +41,41 @@ document.addEventListener("DOMContentLoaded", () => {
     scrollToTopBtn.addEventListener("click", () => {
         window.scrollTo({ top: 0, behavior: "smooth" });
     });
-
-    // Lexikon-Button: Weiterleitung
-    const lexikonButton = document.getElementById("LexikonButton");
-    if (lexikonButton) {
-        lexikonButton.addEventListener("click", () => {
-            window.location.href = "/pages/lexikon.html";
-        });
-    }
 });
 
-// Portionsrechner für Rezepte
-// Erwartet: grundMengen = [Zahlen], inputId = String, zutatPrefix = String
-// Beispiel: setupPortionenRechner([110,80,20,...], 'portionen-input', 'zutat-')
-function setupPortionenRechner(grundMengen, inputId, zutatPrefix) {
-    const input = document.getElementById(inputId);
+// Lexikon Live-Suche: Filtert Einträge beim Tippen, auch nach Teilworten und Synonymen
+if (window.location.pathname.includes('lexikon')) {
+  document.addEventListener('DOMContentLoaded', function () {
+    const input = document.getElementById('lexikon-suche');
     if (!input) return;
-    function updateZutatenMengen() {
-        const faktor = parseInt(input.value) || 1;
-        grundMengen.forEach((menge, i) => {
-            const zutat = document.getElementById(zutatPrefix + i);
-            if (zutat) {
-                zutat.textContent = (menge * faktor).toLocaleString('de-DE');
-            }
-        });
-    }
-    input.addEventListener('input', updateZutatenMengen);
-    updateZutatenMengen();
+    const eintraege = Array.from(document.querySelectorAll('.lexikon-eintrag'));
+    // Synonyme/Suchbegriffe für die wichtigsten Einträge
+    const synonyme = {
+      sauerteig: ['teig', 'sauer', 'starter', 'anstellgut', 'sauerteig'],
+      autolyse: ['ruhe', 'teig', 'autolyse'],
+      stockgare: ['gare', 'teig', 'ruhe', 'stockgare', 'gehzeit'],
+      stueckgare: ['gare', 'teig', 'ruhe', 'stückgare', 'gehzeit'],
+      krume: ['krume', 'brot', 'innen', 'poren'],
+      kruste: ['kruste', 'brot', 'außen', 'knusprig'],
+      vorteig: ['vorteig', 'poolish', 'biga', 'teig'],
+      fenstertest: ['fenster', 'test', 'gluten', 'dehnen', 'teig'],
+      mehltypen: ['mehl', 'typ', 'mehltyp', '405', '1050', 'vollkorn'],
+      schwaden: ['schwaden', 'dampf', 'ofen', 'kruste'],
+      ofentrieb: ['ofen', 'trieb', 'aufgehen', 'krume', 'volumen']
+    };
+    input.addEventListener('input', function () {
+      const suchbegriff = input.value.trim().toLowerCase();
+      eintraege.forEach(eintrag => {
+        const id = eintrag.id;
+        const text = eintrag.innerText.toLowerCase();
+        const syns = synonyme[id] || [];
+        // Treffer, wenn Suchbegriff im Text ODER in Synonymen
+        const match =
+          suchbegriff === '' ||
+          text.includes(suchbegriff) ||
+          syns.some(s => s.includes(suchbegriff) || suchbegriff.includes(s));
+        eintrag.style.display = match ? '' : 'none';
+      });
+    });
+  });
 }
-
-// Beispielaufruf der Portionsrechner-Funktion
-// Beispielaufruf der Funktion mit Grundmengen für 4 Personen
-// setupPortionenRechner([250, 150, 100], 'portionen-input', 'zutat-');

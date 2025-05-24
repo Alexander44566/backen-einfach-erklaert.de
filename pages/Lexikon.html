@@ -8,6 +8,7 @@
     <meta name="author" content="Backen einfach erklärt">
     <title>Lexikon – Backen einfach erklärt</title>
     <link rel="stylesheet" href="/styles/general.css">  <!-- Verlinkung der allgemeinen CSS-Datei -->
+    <link rel="stylesheet" href="/styles/lexikon.css"> <!-- Verlinkung der Lexikon-spezifischen CSS-Datei -->
     <link rel="icon" href="/assets/img/Favicon.ico" type="image/x-icon">
     <script src="/scripts/general.js"></script> <!-- Verlinkung der allgemeinen Javascript-Datei -->
 </head>
@@ -28,10 +29,82 @@
         </header>
 
         <section>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
+            <label for="lexikon-suche" class="visually-hidden"></label>
+            <input type="search" id="lexikon-suche" placeholder="Begriff suchen..." aria-label="Begriff im Lexikon suchen" autocomplete="off" style="margin-bottom:2em;max-width:350px;width:100%;padding:0.7em 1em;border-radius:8px;border:1px solid #ccc;font-size:1.1em;">
+
+            <div class="content-block lexikon-eintrag" id="autolyse">
+                <h3>Autolyse</h3>
+                <p>Die Autolyse ist eine Ruhephase, die direkt nach dem Vermengen von Mehl und Wasser stattfindet –
+                    noch bevor Hefe oder Salz hinzugegeben werden.
+                    Während dieser Zeit beginnen Enzyme im Mehl, die Teigstruktur zu verbessern.
+                    Das Ergebnis: ein geschmeidigerer, aromatischerer Teig, der sich leichter verarbeiten lässt
+                    und ein besonders saftiges Brot ergibt. Schon 20–60 Minuten Autolyse machen einen spürbaren Unterschied!</p>
+            </div>
+            <div class="content-block lexikon-eintrag" id="sauerteig">
+                <h3>Sauerteig</h3>
+                <p>Sauerteig ist ein natürlicher Teigansatz aus Mehl und Wasser, in dem wilde Hefen und Milchsäurebakterien leben.
+                    Er sorgt für lockeres, aromatisches Brot mit einer feinen Säurenote – ganz ohne Industriehefe.
+                    Sauerteig muss regelmäßig gefüttert werden und entwickelt dabei ein einzigartiges Aroma.
+                    Viele Bäcker nennen ihn liebevoll ihr „Haustier im Glas“.</p>
+            </div>
+            <div class="content-block lexikon-eintrag" id="stockgare">
+                <h3>Stockgare</h3>
+                <p>Die Stockgare ist die erste, meist längere Gehzeit des Teigs nach dem Kneten.
+                    In dieser Phase entwickelt der Teig Geschmack, Struktur und Volumen.
+                    Je länger und kühler die Stockgare, desto aromatischer und bekömmlicher wird das Brot.
+                    Sie ist entscheidend für eine lockere Krume und ein gutes Backergebnis.</p>
+            </div>
+            <div class="content-block lexikon-eintrag" id="stueckgare">
+                <h3>Stückgare</h3>
+                <p>Die Stückgare ist die zweite Gehzeit, die nach dem Formen des Teigs stattfindet.
+                    Während dieser Zeit entspannt sich der Teig, bevor er gebacken wird.
+                    Die Stückgare beeinflusst maßgeblich die Porung, das Volumen und die Kruste des fertigen Brots.
+                    Eine optimale Stückgare sorgt für ein schönes, gleichmäßiges Backergebnis.</p>
+            </div>
+            <div class="content-block lexikon-eintrag" id="krume">
+                <h3>Krume</h3>
+                <p>Die Krume bezeichnet das weiche, innere des Brots.
+                    Eine offene, saftige Krume mit großen Poren ist bei vielen Broten das Ziel und gilt als
+                    Zeichen für eine gute Teigführung. Sie entsteht durch eine sorgfältige Teigbearbeitung und ausreichend
+                    lange Gehzeiten.</p>
+            </div>
+            <div class="content-block lexikon-eintrag" id="ofentrieb">
+                <h3>Ofentrieb</h3>
+                <p>Der Ofentrieb beschreibt den schnellen Volumenzuwachs des Teigs in den ersten Minuten im heißen Ofen.
+                    Durch die Hitze dehnen sich die Gärgase im Teig aus, das Brot geht noch einmal richtig auf.
+                    Ein guter Ofentrieb sorgt für eine lockere Krume und eine schön ausgeprägte Kruste –
+                    das Highlight jedes Backvorgangs!</p>
+            </div>
+            <div class="content-block lexikon-eintrag" id="kruste">
+                <h3>Kruste</h3>
+                <p>Die Kruste ist die äußere, meist knusprige Schicht des Brots.
+                    Sie entsteht durch das Backen bei hoher Temperatur und sorgt für Aroma, Biss und den typischen Brotgeruch.
+                    Eine gut ausgebackene Kruste schützt die Krume vor dem Austrocknen und gibt dem Brot Charakter.</p>
+            </div>
+            <div class="content-block lexikon-eintrag" id="vorteig">
+                <h3>Vorteig</h3>
+                <p>Ein Vorteig ist ein Teig, der aus einem Teil des Mehls,
+                    Wasser und wenig Hefe oder Sauerteig angesetzt und vor dem Hauptteig einige Stunden oder über Nacht reift.
+                    Er verbessert Geschmack, Frischhaltung und Bekömmlichkeit des Brots.</p>
+            </div>
+            <div class="content-block lexikon-eintrag" id="fenstertest">
+                <h3>Fenstertest</h3>
+                <p>Mit dem Fenstertest prüft man, ob ein Teig ausreichend geknetet wurde.
+                    Dazu zieht man ein kleines Stück Teig vorsichtig auseinander. Lässt es sich zu einer dünnen,
+                    fast durchsichtigen Membran dehnen, ist das Glutengerüst stabil und der Teig bereit für die Gare.</p>
+            </div>
+            <div class="content-block lexikon-eintrag" id="mehltypen">
+                <h3>Mehltypen</h3>
+                <p>Mehltypen geben an, wie viele Mineralstoffe im Mehl enthalten sind. Je höher die Typenzahl,
+                    desto mehr Schalenanteile und Nährstoffe sind enthalten. Typ 405 ist besonders hell,
+                    Typ 1050 enthält mehr Ballaststoffe und eignet sich gut für kräftige Brote.</p>
+            </div>
+            <div class="content-block lexikon-eintrag" id="schwaden">
+                <h3>Schwaden</h3>
+                <p>Schwaden bedeutet, beim Backen Dampf in den Ofen zu geben. Der Dampf sorgt dafür,
+                    dass das Brot beim Backen gut aufgeht und eine glänzende, knusprige Kruste bekommt.
+                    Nach einigen Minuten wird der Dampf abgelassen, damit die Kruste ausbacken kann.</p>
+            </div>
         </section>
         
          <!-- Footer-Bereich -->
