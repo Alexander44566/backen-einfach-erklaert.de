@@ -1,7 +1,14 @@
+// ------------------------------------------------------
+// blog.scss – Spezifische Styles für Blogseiten
+// ------------------------------------------------------
+// Enthält: Layout, Responsive Tabellen, Zeitstempel, Pagination, Buttons
+//
 // Importiere die allgemeinen Styles aus der general.scss
 @import './general.scss';
 
-// Überschreibe spezifische Styles für Blogartikel
+// -----------------------------
+// Grundlayout & Textausrichtung
+// -----------------------------
 body {
     text-align: left; // Gesamter Text linksbündig
 }
@@ -9,11 +16,14 @@ body {
 .content-block {
     position: relative;
     text-align: left; // Text innerhalb der Content-Blöcke linksbündig
-    padding: 2rem; // Optional: Zusätzlicher Innenabstand für bessere Lesbarkeit
+    padding: 2rem; // Zusätzlicher Innenabstand für bessere Lesbarkeit
     padding-bottom: 2.2em;
-    line-height: 1.8; // Optional: Angenehmer Zeilenabstand für längere Texte
+    line-height: 1.8; // Angenehmer Zeilenabstand für längere Texte
 }
 
+// -----------------------------
+// Zeitstempel (Datum) Styling
+// -----------------------------
 .content-block time[itemprop="datePublished"] {
     position: absolute;
     right: 1.2em;
@@ -24,7 +34,7 @@ body {
     padding: 0;
     margin: 0;
 }
-
+// Zeitstempel am Handy unter den Artikel verschieben
 @media (max-width: 600px) {
     .content-block time[itemprop="datePublished"] {
         position: static;
@@ -33,7 +43,6 @@ body {
         text-align: right;
     }
 }
-
 @media (max-width: 700px) {
   .content-block {
     display: flex;
@@ -47,6 +56,9 @@ body {
   }
 }
 
+// -----------------------------
+// Typografie für Content-Elemente
+// -----------------------------
 .content-block h2, 
 .content-block h3, 
 .content-block h4, 
@@ -55,30 +67,13 @@ body {
 .content-block ol, 
 .content-block table {
     text-align: left !important; // Erzwingt Links-Ausrichtung
-    margin-bottom: 1.5rem; // Optional: Abstand nach unten für bessere Struktur
+    margin-bottom: 1.5rem; // Abstand nach unten für bessere Struktur
 }
 
-// Tabelle
-table {
-    width: 100%; // Tabellenbreite
-    border-collapse: collapse; // Tabellenränder zusammenführen
-    margin-top: 1rem;
-    border: 1px solid black; // Schwarze Rahmenlinie für die gesamte Tabelle
-}
-
-table th, table td {
-    border: 1px solid black; // Schwarze Rahmenlinien für Zellen
-    padding: 0.8rem; // Innenabstand
-    text-align: left; // Text in Tabellenzellen linksbündig
-}
-
-table th {
-    background-color: #8B4513; // Highlight-Farbe (Braun) für die Kopfzeile
-    color: white; // Weiße Schriftfarbe
-    font-weight: bold;
-}
-
-// Tabelle Standard-Design für große Bildschirme
+// -----------------------------
+// Tabellen-Design (Responsive)
+// -----------------------------
+// Standard-Design für große Bildschirme
 .content-block table {
   width: 100%;
   border-collapse: collapse;
@@ -87,6 +82,12 @@ table th {
   display: table;
   font-size: 1em;
   overflow-x: unset;
+  background: #f7f3ed; // Tabellenhintergrundfarbe für bessere Lesbarkeit
+}
+.content-block th {
+  background: $HighlightText-color; // Kopfzeile in Highlight-Farbe
+  color: #fff;
+  font-weight: bold;
 }
 .content-block th,
 .content-block td {
@@ -95,7 +96,7 @@ table th {
   text-align: left;
   font-size: 1em;
 }
-// Responsive Tabellen für kleine Bildschirme
+// Responsive Tabellen für kleine Bildschirme (<700px)
 @media (max-width: 700px) {
   .content-block table,
   .content-block thead,
@@ -134,10 +135,11 @@ table th {
     white-space: normal;
     font-weight: bold;
     color: #a0522d;
-    content: attr(data-label);
+    content: attr(data-label); // Tabellenkopf als Label anzeigen
     font-size: 0.98em;
   }
 }
+// Noch kleinere Bildschirme (<480px)
 @media (max-width: 480px) {
   .content-block table {
     font-size: 0.75em;
@@ -151,6 +153,7 @@ table th {
     font-size: 0.85em;
   }
 }
+// Extrem kleine Bildschirme (<350px)
 @media (max-width: 350px) {
   .content-block table {
     font-size: 0.6em;
@@ -162,13 +165,15 @@ table th {
   }
 }
 
+// -----------------------------
+// Pagination (Seiten-Navigation)
+// -----------------------------
 .pagination {
     display: flex;
     justify-content: center;
     align-items: center;
     margin-top: 2rem;
     gap: 0.5rem;
-
     .page-link {
         text-decoration: none;
         color: $Text-color;
@@ -176,11 +181,7 @@ table th {
         padding: 0.5rem 1rem;
         border-radius: 5px;
         transition: all 0.3s ease;
-
-        // Hinweis: Die HTML-Links für die Pagination wurden bereits auf kleingeschriebene Dateinamen umgestellt.
-        // In diesem SCSS ist keine direkte Link-URL enthalten, daher ist keine weitere Anpassung nötig.
     }
-
     .current-page {
         color: white;
         background-color: $HighlightText-color;
@@ -190,6 +191,9 @@ table th {
     }
 }
 
+// -----------------------------
+// Buttons (z.B. für Content-Links)
+// -----------------------------
 .content-button {
     text-decoration: none !important;
     border-bottom: none !important;
