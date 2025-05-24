@@ -479,25 +479,6 @@ body {
   margin-bottom: 1.5rem;
 }
 
-table {
-  width: 100%;
-  border-collapse: collapse;
-  margin-top: 1rem;
-  border: 1px solid black;
-}
-
-table th, table td {
-  border: 1px solid black;
-  padding: 0.8rem;
-  text-align: left;
-}
-
-table th {
-  background-color: #8B4513;
-  color: white;
-  font-weight: bold;
-}
-
 .content-block table {
   width: 100%;
   border-collapse: collapse;
@@ -506,6 +487,13 @@ table th {
   display: table;
   font-size: 1em;
   overflow-x: unset;
+  background: #f7f3ed;
+}
+
+.content-block th {
+  background: #A0522D;
+  color: #fff;
+  font-weight: bold;
 }
 
 .content-block th,

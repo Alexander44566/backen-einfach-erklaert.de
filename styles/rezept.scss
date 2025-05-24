@@ -1,18 +1,27 @@
+// rezept.scss – Spezifische Styles für Rezeptseiten
+// --------------------------------------------------
+// Enthält: Layout, Responsive Tabellen, Pagination, Buttons, Info-Boxen, Print-Styles
+//
+// Importiere allgemeine Styles
 @import './general.scss';
 
+// Farbvariablen
 $HighlightText-color: #A0522D;
 
-// Überschreibe spezifische Styles für Blogartikel
+// -----------------------------
+// Grundlayout & Textausrichtung
+// -----------------------------
 body {
     text-align: left; // Gesamter Text linksbündig
 }
 
 .content-block {
     text-align: left; // Text innerhalb der Content-Blöcke linksbündig
-    padding: 2rem; // Optional: Zusätzlicher Innenabstand für bessere Lesbarkeit
-    line-height: 1.8; // Optional: Angenehmer Zeilenabstand für längere Texte
+    padding: 2rem; // Zusätzlicher Innenabstand für bessere Lesbarkeit
+    line-height: 1.8; // Angenehmer Zeilenabstand für längere Texte
 }
 
+// Einheitliche Ausrichtung & Abstand für Content-Elemente
 .content-block h2, 
 .content-block h3, 
 .content-block h4, 
@@ -21,36 +30,108 @@ body {
 .content-block ol, 
 .content-block table {
     text-align: left !important; // Erzwingt Links-Ausrichtung
-    margin-bottom: 1.5rem; // Optional: Abstand nach unten für bessere Struktur
+    margin-bottom: 1.5rem; // Abstand nach unten für bessere Struktur
 }
 
-// Tabelle
-table {
-    width: 100%; // Tabellenbreite
-    border-collapse: collapse; // Tabellenränder zusammenführen
-    margin-top: 1rem;
-    border: 1px solid black; // Schwarze Rahmenlinie für die gesamte Tabelle
+// -----------------------------
+// Tabellen-Design (Responsive)
+// -----------------------------
+// Standard-Design für große Bildschirme
+.content-block table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 2em;
+  max-width: 100%;
+  display: table;
+  font-size: 1em;
+  overflow-x: unset;
+}
+.content-block th,
+.content-block td {
+  padding: 0.7em 1em;
+  border: 1px solid #e0d6c6;
+  text-align: left;
+  font-size: 1em;
 }
 
-table th, table td {
-    border: 1px solid black; // Schwarze Rahmenlinien für Zellen
-    padding: 0.8rem; // Innenabstand
-    text-align: left; // Text in Tabellenzellen linksbündig
-}
-
-table th {
-    background-color: #8B4513; // Highlight-Farbe (Braun) für die Kopfzeile
-    color: white; // Weiße Schriftfarbe
+// Responsive Tabellen für kleine Bildschirme (<700px)
+@media (max-width: 700px) {
+  .content-block table,
+  .content-block thead,
+  .content-block tbody,
+  .content-block th,
+  .content-block td,
+  .content-block tr {
+    display: block;
+    width: 100%;
+  }
+  .content-block thead {
+    display: none;
+  }
+  .content-block tr {
+    margin-bottom: 1.2em;
+    border-bottom: 2px solid #f7f3ed;
+    box-shadow: 0 2px 8px rgba(160,82,45,0.04);
+    background: #fff;
+    border-radius: 0.7em;
+    padding: 0.5em 0.7em;
+  }
+  .content-block td {
+    position: relative;
+    padding-left: 50%;
+    min-height: 2.5em;
+    border: none;
+    border-bottom: 1px solid #e0d6c6;
+    font-size: 1em;
+    box-sizing: border-box;
+  }
+  .content-block td:before {
+    position: absolute;
+    top: 0.7em;
+    left: 1em;
+    width: 45%;
+    white-space: normal;
     font-weight: bold;
+    color: #a0522d;
+    content: attr(data-label); // Tabellenkopf als Label anzeigen
+    font-size: 0.98em;
+  }
+}
+// Noch kleinere Bildschirme (<480px)
+@media (max-width: 480px) {
+  .content-block table {
+    font-size: 0.75em;
+    max-width: 100vw;
+    overflow-x: auto;
+    display: block;
+  }
+  .content-block th,
+  .content-block td {
+    padding: 0.35em 0.35em;
+    font-size: 0.85em;
+  }
+}
+// Extrem kleine Bildschirme (<350px)
+@media (max-width: 350px) {
+  .content-block table {
+    font-size: 0.6em;
+  }
+  .content-block th,
+  .content-block td {
+    padding: 0.2em 0.2em;
+    font-size: 0.7em;
+  }
 }
 
+// -----------------------------
+// Pagination (Seiten-Navigation)
+// -----------------------------
 .pagination {
     display: flex;
     justify-content: center;
     align-items: center;
     margin-top: 2rem;
     gap: 0.5rem;
-
     .page-link {
         text-decoration: none;
         color: $Text-color;
@@ -58,13 +139,11 @@ table th {
         padding: 0.5rem 1rem;
         border-radius: 5px;
         transition: all 0.3s ease;
-
         &:hover {
             background-color: $HighlightText-color;
             color: white;
         }
     }
-
     .current-page {
         color: white;
         background-color: $HighlightText-color;
@@ -74,13 +153,14 @@ table th {
     }
 }
 
-// Zurück-zum-Blog-Link (wie im Blog, aber für Rezepte)
+// -----------------------------
+// Zurück-zum-Blog-Link (Navigation)
+// -----------------------------
 .back-to-blog-nav {
   display: flex;
   justify-content: flex-start;
   margin: 0 0 2.5rem 0;
 }
-
 .back-to-blog {
   display: inline-flex;
   align-items: center;
@@ -97,23 +177,19 @@ table th {
   transition: color 0.2s, background 0.2s;
   position: relative;
 }
-
 .back-to-blog::after {
   content: '';
   display: none;
 }
-
 .back-to-blog:hover, .back-to-blog:focus {
   color: darken($HighlightText-color, 10%);
   background: #fffbe6;
   outline: none;
   text-decoration: none;
 }
-
 .back-to-blog:active {
   color: darken($HighlightText-color, 20%);
 }
-
 @media (max-width: 600px) {
   .back-to-blog {
     font-size: 1rem;
@@ -121,7 +197,9 @@ table th {
   }
 }
 
-// Portionsrechner – Highlightfarbe als Hintergrund, weiße Schrift
+// -----------------------------
+// Portionsrechner (Interaktives UI-Element)
+// -----------------------------
 .portion-rechner {
   background: $HighlightText-color;
   border: none;
@@ -134,7 +212,6 @@ table th {
   align-items: center;
   gap: 1.2em;
   flex-wrap: wrap;
-
   h2, label {
     color: #fff;
   }
@@ -194,6 +271,9 @@ table th {
   }
 }
 
+// -----------------------------
+// Rezept-Info-Box (Meta-Infos)
+// -----------------------------
 .rezept-info {
   display: flex;
   flex-direction: column;
@@ -205,21 +285,17 @@ table th {
   font-size: 1.08em;
   box-shadow: 0 2px 10px rgba(160,82,45,0.07);
   border-left: 5px solid $HighlightText-color;
-
   li {
     min-width: 180px;
     margin-bottom: 0.5em;
-
     strong {
       color: $HighlightText-color;
       font-weight: 700;
     }
-    /* Neue Regel für gleichmäßige Einrückung */
     list-style-position: inside;
     padding-left: 0.5em;
     text-indent: -0.5em;
   }
-
   .zeit-row {
     display: flex;
     flex-direction: row;
@@ -229,19 +305,17 @@ table th {
     border: none;
     box-shadow: none;
     padding: 0;
-
     .zeit-block {
       font-size: 1.08em;
       font-weight: 600;
       color: $HighlightText-color;
-      background: #f3ede7; // Noch dezenteres, helleres Beige
+      background: #f3ede7;
       border-radius: 0.7em;
       padding: 0.3em 1em;
       margin-right: 0.5em;
       display: inline-block;
     }
   }
-
   .zeit-details {
     margin-left: 0.5em;
     font-size: 1em;
@@ -252,12 +326,10 @@ table th {
     box-shadow: none;
     padding: 0;
   }
-
   @media (max-width: 600px) {
     .zeit-row {
       flex-direction: column;
       gap: 0.3em;
-
       .zeit-block {
         width: 100%;
         margin-right: 0;
@@ -266,6 +338,9 @@ table th {
   }
 }
 
+// -----------------------------
+// Nährwertbox (Zusatzinfos)
+// -----------------------------
 .naehrwerte {
   background: #fff;
   border-left: 4px solid #A0522D;
@@ -276,30 +351,33 @@ table th {
   line-height: 1.6;
   padding: 1em 1.2em 1em 2.2em;
   margin: 2em 0 2em 0;
-
   strong {
     font-size: 1.08em;
     letter-spacing: 0.01em;
   }
-
   ul {
     margin: 0.7em 0 0.5em 0.2em;
     padding: 0;
     list-style: disc inside;
     font-size: 1em;
   }
-
   small {
     font-size: 0.97em;
     color: #7a6a5a;
   }
 }
 
+// -----------------------------
+// Buttons (z.B. für Content-Links)
+// -----------------------------
 .content-button {
   text-decoration: none !important;
   border-bottom: none !important;
 }
 
+// -----------------------------
+// Print-Styles (Druckansicht)
+// -----------------------------
 @media print {
   body, html {
     background: #fff !important;
